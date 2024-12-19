@@ -21,8 +21,6 @@
     pkgs = import nixpkgs { inherit system; };
   in
   {
-    packages.${system}.lain = pkgs.callPackage ./lain.nix { inherit pkgs system lain-src; };
-
     nixosModules.temmix = import ./temmix.nix;
     nixosModules.default = self.nixosModules.temmix;
   };
