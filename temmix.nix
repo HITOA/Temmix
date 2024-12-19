@@ -1,11 +1,11 @@
-{ lib, config, pkgs, inputs, ... }: {
+{ lib, config, pkgs, inputs, system, ... }: {
     options.temmix = {
         enable = lib.mkEnableOption "Enable temmix.";
     };
 
     config = 
     let
-        lain = pkgs.callPackage ./lain.nix { inherit (inputs) pkgs system lain-src; };
+        lain = pkgs.callPackage ./lain.nix { inherit pkgs system; inherit (inputs) lain-src; };
         setwall = pkgs.writeShellScriptBin "setwall" ''
             if [ "$1" == "" ]; then
                 echo "Missing filename."
