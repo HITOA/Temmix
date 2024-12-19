@@ -1,4 +1,4 @@
-{ ... }: {
+{ lib, config, ... }: {
     options.temmix = {
         enable = lib.mkEnableOption "Enable temmix.";
     };
