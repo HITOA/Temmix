@@ -1,4 +1,4 @@
-lain-src : { pkgs, system, ... }:
+{ pkgs, system, lain-src, ... }:
 pkgs.stdenv.mkDerivation {
     name = "lain";
     inherit system;
