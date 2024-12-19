@@ -1,4 +1,4 @@
-lain-src : { lib, config, pkgs, system, ... }: {
+{ lain-src } : { lib, config, pkgs, system, ... }: {
     options.temmix = {
         enable = lib.mkEnableOption "Enable temmix.";
     };
