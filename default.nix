@@ -1,3 +1,3 @@
 lain : {
-    imports = [ (./temmix.nix lain) ./modules ];
+    imports = [ (import ./temmix.nix lain) ./modules ];
 }
