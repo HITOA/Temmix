@@ -3,7 +3,7 @@
         enable = lib.mkEnableOption "Enable temmix.";
     };
 
-    config = lib.mkIf config.temmix.enable 
+    config = 
     let
         setwall = pkgs.writeShellScriptBin "setwall" ''
             if [ "$1" == "" ]; then
@@ -13,6 +13,7 @@
             echo pute
         '';
     in
+    lib.mkIf config.temmix.enable 
     {
         home.packages = [ setwall ];
     };
