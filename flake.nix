@@ -21,7 +21,7 @@
     pkgs = import nixpkgs { inherit system; };
   in
   {
-    nixosModules.temmix = import ./temmix.nix;
+    nixosModules.temmix = import ./temmix.nix { inherit (inputs) lib config; inherit pkgs system lain-src; };
     nixosModules.default = self.nixosModules.temmix;
   };
 }
