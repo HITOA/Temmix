@@ -4,7 +4,10 @@ pkgs.stdenv.mkDerivation {
     inherit system;
     src = lain-src;
     buildPhase = ''
+        gcc src/image.cpp src/main.cpp src/quantizer.cpp src/theme.cpp -o lain -lstdc++ -lm -std=gnu++20 -O3
+    '';
+    installPhase = ''
         mkdir -p $out/bin
-        gcc src/image.cpp src/main.cpp src/quantizer.cpp src/theme.cpp -o $out/bin/lain -lstdc++ -lm -std=gnu++20 -O3
+        cp lain $out/bin/lain
     '';
 }

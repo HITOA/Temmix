@@ -21,6 +21,6 @@
     pkgs = import nixpkgs { inherit system; };
   in
   {
-    packages.${system}.default = import ./default.nix { inherit pkgs system lain-src; };
+    packages.${system}.default = pkgs.callPackage ./default.nix { inherit pkgs system lain-src; };
   };
 }
