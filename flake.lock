@@ -1,0 +1,44 @@
+{
+  "nodes": {
+    "lain-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1734601302,
+        "narHash": "sha256-5RA4489ZO8RXOm67NYBxg+Gm2vt7a+C2Iivi/RiMLAc=",
+        "owner": "HITOA",
+        "repo": "Lain",
+        "rev": "6de7654a831c209523c9ad23a3b3512e3c145f9b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "HITOA",
+        "repo": "Lain",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1734424634,
+        "narHash": "sha256-cHar1vqHOOyC7f1+tVycPoWTfKIaqkoe1Q6TnKzuti4=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "d3c42f187194c26d9f0309a8ecc469d6c878ce33",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "lain-src": "lain-src",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
