@@ -15,7 +15,7 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, lain-src, ... }:
+  outputs = inputs @ { self, nixpkgs, lain-src, ... }:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; };
@@ -23,6 +23,6 @@
   {
     packages.${system}.default = pkgs.callPackage ./lain.nix { inherit pkgs system lain-src; };
 
-    nixosModules.temmix = import ./temmix.nix { inherit pkgs; };
+    nixosModules.temmix = import ./temmix.nix { inherit (nixpkgs) lib config pkgs; };
   };
 }
