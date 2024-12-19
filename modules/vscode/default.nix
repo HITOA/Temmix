@@ -3,7 +3,7 @@
         enable = lib.mkOption {
             type = lib.types.bool;
             description = "Enable theming for VSCode.";
-            default = programs.vscode.enable;
+            default = config.programs.vscode.enable;
         };
     };
 
