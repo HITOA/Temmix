@@ -19,7 +19,7 @@
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; };
-    lain = pkgs.callPackage ./lain.nix lain-src;
+    lain = pkgs.callPackage ./lain.nix { inherit lain-src };
   in
   {
     nixosModules.temmix = import ./temmix.nix lain;
