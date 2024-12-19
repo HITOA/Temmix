@@ -16,13 +16,14 @@
   };
 
   outputs = inputs @ { self, nixpkgs, lain-src, ... }:
-  let
+  /*let
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; };
-  in
+  in*/
   {
-    packages.${system}.default = pkgs.callPackage ./lain.nix { inherit pkgs system lain-src; };
+    /*packages.${system}.default = pkgs.callPackage ./lain.nix { inherit pkgs system lain-src; };*/
 
     nixosModules.temmix = import ./temmix.nix;
+    nixosModules.default = self.nixosModules.temmix;
   };
 }
