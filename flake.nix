@@ -17,7 +17,8 @@
 
   outputs = inputs @ { self, nixpkgs, lain-src, ... }:
   let
-    pkgs = import nixpkgs;
+    system = "x86_64-linux";
+    pkgs = import nixpkgs { inherit system; };
     lain = pkgs.callPackage ./lain.nix lain-src;
   in
   {
