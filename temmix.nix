@@ -1,4 +1,4 @@
-{ lain } : { lib, config, pkgs, ... }: {
+lain : { lib, config, pkgs, ... }: {
     options.temmix = {
         enable = lib.mkEnableOption "Enable temmix.";
     };
