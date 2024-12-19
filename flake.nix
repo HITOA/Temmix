@@ -23,6 +23,6 @@
   {
     packages.${system}.default = pkgs.callPackage ./lain.nix { inherit pkgs system lain-src; };
 
-    nixosModules.temmix = import ./temmix.nix { inherit (inputs) lib config pkgs; };
+    nixosModules.temmix = import ./temmix.nix;
   };
 }
