@@ -17,7 +17,7 @@
 
   outputs = inputs @ { self, nixpkgs, lain-src, ... }:
   let
-    lain = pkgs.callPackage (./lain.nix lain-src);
+    lain = import (./lain.nix lain-src);
   in
   {
     nixosModules.temmix = import ./temmix.nix lain;
