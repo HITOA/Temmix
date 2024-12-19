@@ -15,6 +15,6 @@
     in
     lib.mkIf config.temmix.enable 
     {
-        home.packages = [ setwall ];
+        environment.systemPackages = [ setwall ];
     };
 }
