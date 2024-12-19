@@ -17,9 +17,7 @@
 
   outputs = inputs @ { self, nixpkgs, lain-src, ... }:
   let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs { inherit system; };
-    lain = pkgs.callPackage ./lain.nix { inherit pkgs system lain-src; };
+    lain = { system, pkgs }: pkgs.callPackage ./lain.nix { inherit pkgs system lain-src; };
   in
   {
     nixosModules.temmix = import ./temmix.nix lain;
