@@ -1,4 +1,4 @@
-nixosConfig: { lib, config, pkgs, ... } : 
+nixosConfig: { lib, config, pkgs, osConfig, ... } : 
 let
     themeExtension = pkgs.runCommandLocal "temmix-vscode" {
         vscodeExtUniqueId = "temmix.temmix";
@@ -19,7 +19,7 @@ in
         };
     };
 
-    config = lib.mkIf (nixosConfig.temmix.enable && config.temmix.vscode.enable)
+    config = lib.mkIf (osConfig.temmix.enable && config.temmix.vscode.enable)
     {
         programs.vscode = {
             extensions = [ themeExtension ];
@@ -29,9 +29,9 @@ in
             };
         };
 
-        nixosConfig.temmix.templates = [{
+        /*nixosConfig.temmix.templates = [{
             input = ./temmix-vscode/themes/Temmix-color-theme-template.json;
             output = ./temmix-vscode/themes/Temmix-color-theme.json;
-        }];
+        }];*/
     };
 }
