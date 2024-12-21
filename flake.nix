@@ -23,6 +23,6 @@
   in
   {
     homeManagerModules.temmix = import ./default.nix lain;
-    homeManagerModules.default = self.nixosModules.temmix;
+    homeManagerModules.default = self.homeManagerModules.temmix;
   };
 }
