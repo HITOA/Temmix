@@ -11,12 +11,11 @@ lain : { lib, config, pkgs, ... }: {
     let
         argsTemplates = builtins.map (value: "-t ${value.input} ${value.output}") config.temmix.templates;
         setwall = pkgs.writeShellScriptBin "setwall" ''
-            if [ $# <= 1 ]; then
+            if [ "$1" == "" ]; then
                 echo "Missing filename."
                 exit
             fi
 
-            shift
             ${lain}/bin/lain -i $@
 
             ${config.temmix.wallpaperCmd}
