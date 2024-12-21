@@ -1,4 +1,4 @@
-nixosConfig: { lib, config, pkgs, osConfig, ... } : 
+{ lib, config, pkgs, osConfig, ... } : 
 let
     themeExtension = pkgs.runCommandLocal "temmix-vscode" {
         vscodeExtUniqueId = "temmix.temmix";
