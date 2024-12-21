@@ -18,7 +18,7 @@ lain : { lib, config, pkgs, ... }: {
 
     config = 
     let
-        argsTemplates = builtins.map (value: "-t ${value.input} ${value.output}") config.temmix.templates
+        argsTemplates = builtins.map (value: "-t ${value.input} ${value.output}") config.temmix.templates;
         setwall = pkgs.writeShellScriptBin "setwall" ''
             if [ "$1" == "" ]; then
                 echo "Missing filename."
