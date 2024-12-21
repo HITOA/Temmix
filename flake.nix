@@ -25,7 +25,7 @@
     nixosModules.temmix = import ./nixos.nix lain self.homeManagerModules.temmix;
     nixosModules.default = self.nixosModules.temmix;
 
-    homeManagerModules.temmix = { config, ... }: import ./hm.nix config;
+    homeManagerModules.temmix = import ./hm.nix;
     homeManagerModules.default = self.homeManagerModules.temmix;
   };
 }
