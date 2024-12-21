@@ -29,7 +29,7 @@ in
             };
         };
 
-        home.sessionVariables = {
+        environment.sessionVariables = {
             LAIN_TEMPLATE = "-t ${./temmix-vscode/themes/Temmix-color-theme-template.json} ${./temmix-vscode/themes/Temmix-color-theme.json}";
         };
     };
