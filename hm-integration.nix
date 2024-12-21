@@ -1,4 +1,4 @@
-homeManagerModule: { lib, config, ... }: 
+homeManagerModule: { lib, config, options, ... }: 
 {
     options.temmix.home-manager = {
         autoImport = lib.mkOption {
@@ -7,7 +7,9 @@ homeManagerModule: { lib, config, ... }:
         };
     };
 
-    config = lib.mkIf config.temmix.home-manager.autoImport {
+    config = 
+    lib.optionalAttrs (options ? home-manager)
+    (lib.mkIf config.temmix.home-manager.autoImport {
         home-manager.sharedModules = [ homeManagerModule ];
-    };
+    });
 } 
