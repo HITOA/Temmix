@@ -29,9 +29,9 @@ in
             };
         };
 
-        /*osConfig.temmix.templates = [{
+        osConfig.temmix.templates = [{
             input = ./temmix-vscode/themes/Temmix-color-theme-template.json;
             output = ./temmix-vscode/themes/Temmix-color-theme.json;
-        }];*/
+        }];
     };
 }
