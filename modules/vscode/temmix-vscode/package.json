@@ -1,0 +1,21 @@
+{
+  "name": "temmix-vscode",
+  "displayName": "temmix-vscode",
+  "description": "Temmix theme extension for vscode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Temmix",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Temmix-color-theme.json"
+      }
+    ]
+  }
+}
