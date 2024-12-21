@@ -2,10 +2,10 @@
   description = "A thmeing packaegs.";
 
   inputs = {
-    /*home-manager = {
+    home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-    };*/
+    };
 
     lain-src = {
       url = "github:HITOA/Lain";
@@ -15,7 +15,7 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
   };
 
-  outputs = inputs @ { self, nixpkgs, lain-src, ... }:
+  outputs = { self, nixpkgs, lain-src, ... }:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; };
