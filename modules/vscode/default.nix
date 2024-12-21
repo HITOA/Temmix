@@ -2,6 +2,8 @@ nixosConfig: { lib, config, pkgs, ... } :
 let
     themeExtension = pkgs.runCommandLocal "temmix-vscode" {
         vscodeExtUniqueId = "temmix.temmix";
+        vscodeExtPublisher = "temmix";
+        version = "0.0.0";
     } ''
         mkdir -p "$out/share/vscode/extensions/$vscodeExtUniqueId/themes"
         ln -s ${./temmix-vscode/themes/Temmix-color-theme.json} "$out/share/vscode/extensions/$vscodeExtUniqueId/themes/Temmix-color-theme.json"
