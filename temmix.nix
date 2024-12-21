@@ -3,6 +3,7 @@ lain : { lib, config, pkgs, ... }: {
         enable = lib.mkEnableOption "Enable temmix.";
         wallpaperCmd = lib.mkOption {
             type = lib.types.string;
+            default = "";
         };
     };
 
@@ -10,12 +11,12 @@ lain : { lib, config, pkgs, ... }: {
     let
         argsTemplates = builtins.map (value: "-t ${value.input} ${value.output}") config.temmix.templates;
         setwall = pkgs.writeShellScriptBin "setwall" ''
-            if [ "$1" == "" ]; then
+            if [ $# <= 1 ]; then
                 echo "Missing filename."
                 exit
             fi
 
-            shift 1
+            shift
             ${lain}/bin/lain -i $@
 
             ${config.temmix.wallpaperCmd}
