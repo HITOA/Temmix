@@ -4,8 +4,8 @@ let
         vscodeExtUniqueId = "temmix.temmix";
     } ''
         mkdir -p "$out/share/vscode/extensions/$vscodeExtUniqueId/themes"
-        ln -s ${./vscode/themes/Temmix-color-theme.json} "$out/share/vscode/extensions/$vscodeExtUniqueId/themes/Temmix-color-theme.json"
-        ln -s ${./vscode/package.json} "$out/share/vscode/extensions/$vscodeExtUniqueId/package.json"
+        ln -s ${./temmix-vscode/themes/Temmix-color-theme.json} "$out/share/vscode/extensions/$vscodeExtUniqueId/themes/Temmix-color-theme.json"
+        ln -s ${./temmix-vscode/package.json} "$out/share/vscode/extensions/$vscodeExtUniqueId/package.json"
     '';
 in
 {
@@ -28,8 +28,8 @@ in
         };
 
         /*osConfig.temmix.templates = [{
-            input = ./.vscode/themes/Temmix-color-theme-template.json;
-            output = ./.vscode/themes/Temmix-color-theme.json;
+            input = ./temmix-vscode/themes/Temmix-color-theme-template.json;
+            output = ./temmix-vscode/themes/Temmix-color-theme.json;
         }];*/
     };
 }
