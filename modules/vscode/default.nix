@@ -29,9 +29,8 @@ in
             };
         };
 
-        /*nixosConfig.temmix.templates = [{
-            input = ./temmix-vscode/themes/Temmix-color-theme-template.json;
-            output = ./temmix-vscode/themes/Temmix-color-theme.json;
-        }];*/
+        home.sessionVariables = {
+            LAIN_TEMPLATE = "-t ${./temmix-vscode/themes/Temmix-color-theme-template.json} ${./temmix-vscode/themes/Temmix-color-theme.json}";
+        };
     };
 }
