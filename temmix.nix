@@ -1,16 +1,6 @@
 lain : { lib, config, pkgs, ... }: {
     options.temmix = {
         enable = lib.mkEnableOption "Enable temmix.";
-        templates = lib.mkOption {
-            type = lib.types.listOf (lib.types.submodule {
-                input = lib.mkOptions {
-                    type = lib.types.path;
-                };
-                output = lib.mkOptions {
-                    type = lib.types.path;
-                };
-            });
-        };
         wallpaperCmd = lib.mkOption {
             type = lib.types.string;
         };
@@ -26,7 +16,7 @@ lain : { lib, config, pkgs, ... }: {
             fi
 
             shift 1
-            ${lain}/bin/lain -i $@ ${builtins.concatStringsSep " " argsTemplates}
+            ${lain}/bin/lain -i $@
 
             ${config.temmix.wallpaperCmd}
         '';
