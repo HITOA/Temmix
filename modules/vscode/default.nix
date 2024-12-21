@@ -1,4 +1,4 @@
-{ lib, config, pkgs, ... } : 
+nixosConfig: { lib, config, pkgs, ... } : 
 let
     themeExtension = pkgs.runCommandLocal "temmix-vscode" {
         vscodeExtUniqueId = "temmix.temmix";
@@ -17,7 +17,7 @@ in
         };
     };
 
-    config = lib.mkIf (config.temmix.enable && config.temmix.vscode.enable)
+    config = lib.mkIf (nixosConfig.temmix.enable && config.temmix.vscode.enable)
     {
         programs.vscode = {
             extensions = [ themeExtension ];

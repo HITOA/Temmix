@@ -1,6 +1,6 @@
-{ ... }: 
+nixosConfig: 
 {
     imports = [ 
-        ./modules 
+        (import ./modules nixosConfig)
     ];
 }

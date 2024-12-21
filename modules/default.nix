@@ -1,6 +1,6 @@
-{ ... }:
+nixosConfig:
 {
     imports = [
-        ./vscode
+        (import ./vscode nixosConfig)
     ];
 }

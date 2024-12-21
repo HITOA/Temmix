@@ -10,6 +10,6 @@ homeManagerModule: { lib, config, options, ... }:
     config = 
     lib.optionalAttrs (options ? home-manager)
     (lib.mkIf config.temmix.home-manager.autoImport {
-        home-manager.sharedModules = [ homeManagerModule { temmix = { enable = config.temmix.enable; }; } ];
+        home-manager.sharedModules = [ (homeManagerModule config) ];
     });
 } 
