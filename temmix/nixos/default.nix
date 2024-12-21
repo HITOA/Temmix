@@ -1,0 +1,3 @@
+setwall: {
+    setwall.templates = "UWU";
+}
