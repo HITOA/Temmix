@@ -1,4 +1,4 @@
-{ lib, config, pkgs, ... } : 
+{ lib, config, pkgs, osConfig, ... } : 
 let
     themeExtension = pkgs.runCommandLocal "temmix-vscode" {
         vscodeExtUniqueId = "temmix.temmix";
@@ -17,7 +17,7 @@ in
         };
     };
 
-    config = lib.mkIf config.temmix.vscode.enable 
+    config = lib.mkIf (osConfig.temmix.enable && config.temmix.vscode.enable)
     {
         programs.vscode = {
             extensions = [ themeExtension ];
@@ -27,7 +27,7 @@ in
             };
         };
 
-        temmix.templates = [{
+        osConfig.temmix.templates = [{
             input = ./.vscode/themes/Temmix-color-theme-template.json;
             output = ./.vscode/themes/Temmix-color-theme.json;
         }];
