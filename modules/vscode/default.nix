@@ -17,7 +17,7 @@ in
         };
     };
 
-    config = lib.mkIf (osConfig.enable && config.temmix.vscode.enable)
+    config = lib.mkIf (osConfig.temmix.enable && config.temmix.vscode.enable)
     {
         programs.vscode = {
             extensions = [ themeExtension ];
@@ -27,7 +27,7 @@ in
             };
         };
 
-        osConfig.templates = [{
+        osConfig.temmix.templates = [{
             input = ./.vscode/themes/Temmix-color-theme-template.json;
             output = ./.vscode/themes/Temmix-color-theme.json;
         }];
