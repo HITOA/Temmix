@@ -13,7 +13,7 @@ lain : { lib, config, pkgs, ... }: {
         };
         wallpaperCmd = lib.mkOption {
             type = lib.types.string;
-        }
+        };
     };
 
     config = 
