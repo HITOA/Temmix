@@ -16,7 +16,7 @@ lain : { lib, config, pkgs, ... }: {
                 exit
             fi
 
-            ${lain}/bin/lain -i $@
+            ${lain}/bin/lain -i $@ $LAIN_TEMPLATE
 
             ${config.temmix.wallpaperCmd}
         '';
