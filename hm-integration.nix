@@ -1,4 +1,5 @@
-homeManagerModule: { lib, config, ... }: {
+homeManagerModule: { lib, config, ... }: 
+{
     options.temmix.home-manager = {
         autoImport = lib.mkOption {
             type = lib.types.bool;
