@@ -22,7 +22,7 @@ lain: { lib, config, pkgs, ... }: {
         };
         cacheFile = lib.mkOption {
             type = lib.types.path;
-            default = config.xdg.cacheFile + "/temmix";
+            default = config.xdg.cacheHome + "/temmix";
         };
     };
 
