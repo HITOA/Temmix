@@ -20,6 +20,10 @@ lain: { lib, config, pkgs, ... }: {
             type = lib.types.str;
             default = "";
         };
+        configFile = lib.mkOption {
+            type = lib.types.path;
+            default = config.xdg.configFile + "/temmix";
+        };
     };
 
     config = 
@@ -38,6 +42,13 @@ lain: { lib, config, pkgs, ... }: {
     in
     lib.mkIf config.temmix.enable 
     {
+        builtins.map (value: 
+        home.file."${value.output}" = {
+            enable = true;
+            executable = false;
+            text = "";
+        };) config.temmix.templates; 
+
         home.packages = [ setwall ];
     };
 }

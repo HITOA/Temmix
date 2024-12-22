@@ -1,14 +1,13 @@
 { lib, config, pkgs, ... } : 
 let
-    colorThemeDataPath = "temmix/vscode/temmix-vscode-color-theme.json";
-    colorThemePath = config.xdg.dataHome + "/${colorThemeDataPath}";
+    renderedTemplatePath = config.temmix.configFile + "/vscode/Temmix-color-theme.json";
     themeExtension = pkgs.runCommandLocal "temmix-vscode" {
         vscodeExtUniqueId = "temmix.temmix";
         vscodeExtPublisher = "temmix";
         version = "0.0.0";
     } ''
         mkdir -p "$out/share/vscode/extensions/$vscodeExtUniqueId/themes"
-        ln -s ${colorThemePath} "$out/share/vscode/extensions/$vscodeExtUniqueId/themes/Temmix-color-theme.json"
+        ln -s ${renderedTemplatePath} "$out/share/vscode/extensions/$vscodeExtUniqueId/themes/Temmix-color-theme.json"
         ln -s ${./temmix-vscode/package.json} "$out/share/vscode/extensions/$vscodeExtUniqueId/package.json"
     '';
 in
@@ -23,12 +22,6 @@ in
 
     config = lib.mkIf (config.temmix.enable && config.temmix.vscode.enable)
     {
-        xdg.dataFile."${colorThemeDataPath}" = {
-            enable = true;
-            executable = false;
-            source = ./temmix-vscode/themes/Temmix-color-theme.json;
-        };
-
         programs.vscode = {
             extensions = [ themeExtension ];
             userSettings = {
@@ -39,7 +32,7 @@ in
         
         temmix.templates = [{ 
             input = ./temmix-vscode/themes/Temmix-color-theme-template.json; 
-            output = colorThemePath;
+            output =  renderedTemplatePath;
         }];
     };
 }
