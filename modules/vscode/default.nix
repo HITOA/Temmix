@@ -1,15 +1,15 @@
 { lib, config, pkgs, ... } : 
 let
-    colorThemeDataPath = "/temmix/vscode/temmix-vscode-color-theme.json";
-    colorThemePath = config.xdg.dataHome + colorThemeDataPath;
+    colorThemeDataPath = "temmix/vscode/temmix-vscode-color-theme.json";
+    colorThemePath = config.xdg.dataHome + "/${colorThemeDataPath}";
     themeExtension = pkgs.runCommandLocal "temmix-vscode" {
         vscodeExtUniqueId = "temmix.temmix";
         vscodeExtPublisher = "temmix";
         version = "0.0.0";
     } ''
         mkdir -p "$out/share/vscode/extensions/$vscodeExtUniqueId/themes"
-        ln -s ${./temmix-vscode/themes/Temmix-color-theme.json} "$out/share/vscode/extensions/$vscodeExtUniqueId/themes/Temmix-color-theme.json"
-        ln -s ${colorThemePath} "$out/share/vscode/extensions/$vscodeExtUniqueId/package.json"
+        ln -s ${colorThemePath} "$out/share/vscode/extensions/$vscodeExtUniqueId/themes/Temmix-color-theme.json"
+        ln -s ${./temmix-vscode/package.json} "$out/share/vscode/extensions/$vscodeExtUniqueId/package.json"
     '';
 in
 {
@@ -26,7 +26,7 @@ in
         xdg.dataFile."${colorThemeDataPath}" = {
             enable = true;
             executable = false;
-            text = "test";
+            source = ./temmix-vscode/themes/Temmix-color-theme.json
         };
 
         programs.vscode = {
