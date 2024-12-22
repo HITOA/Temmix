@@ -46,7 +46,7 @@ lain: { lib, config, pkgs, ... }: {
             enable = true;
             executable = false;
             text = "";
-        }
+        };
         home.packages = [ setwall ];
     };
 }
