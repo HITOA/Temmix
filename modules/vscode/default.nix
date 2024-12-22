@@ -21,10 +21,10 @@ in
 
     config = lib.mkIf (config.temmix.enable && config.temmix.vscode.enable)
     {
-        xdg.dataFile."temmix/temmix-test.txt" = {
+        xdg.dataFile."temmix/rendered/temmix-vscode-color-theme.json" = {
             enable = true;
             executable = false;
-            text = "some content";
+            source = ./temmix-vscode/themes/Temmix-color-theme.json;
         };
 
         programs.vscode = {
@@ -37,7 +37,7 @@ in
         
         temmix.templates = [{ 
             input = ./temmix-vscode/themes/Temmix-color-theme-template.json; 
-            output =  ./temmix-vscode/themes/Temmix-color-theme.json;
+            output =  xdg.dataHome/temmix/rendered/temmix-vscode-color-theme;
         }];
     };
 }
