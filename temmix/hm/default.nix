@@ -42,13 +42,11 @@ lain: { lib, config, pkgs, ... }: {
     in
     lib.mkIf config.temmix.enable 
     {
-        builtins.map (value: 
-        home.file."${value.output}" = {
+        home.file = lib.attrsets.genAttrs (builtins.map (value: "${value.output}") config.temmix.templates) (name: {
             enable = true;
             executable = false;
             text = "";
-        };) config.temmix.templates; 
-
+        });
         home.packages = [ setwall ];
     };
 }
