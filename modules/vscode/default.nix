@@ -28,9 +28,10 @@ in
                 "workbench.colorTheme" = "Temmix";
             };
         };
-
-        home.sessionVariables = {
-            LAIN_TEMPLATE = "-t ${./temmix-vscode/themes/Temmix-color-theme-template.json} ${./temmix-vscode/themes/Temmix-color-theme.json}";
-        };
+        
+        temmix.templates = [{ 
+            input = ./temmix-vscode/themes/Temmix-color-theme-template.json; 
+            output =  ./temmix-vscode/themes/Temmix-color-theme.json;
+        }];
     };
 }

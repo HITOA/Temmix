@@ -20,21 +20,14 @@
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; };
     lain = pkgs.callPackage ./lain.nix { inherit pkgs system lain-src; };
-    setwall = {
-      name = "setwall";
-      builder = "${pkgs.bash}/bin/bash";
-      args = [ ./setwall-builder.sh ];
-      inherit system;
-      inherit (pkgs) coreutils;
-    };
   in
   {
-    nixosModules.temmix = import ./temmix/nixos setwall;
+    nixosModules.temmix = import ./temmix/nixos;
     nixosModules.default = self.nixosModules.temmix;
 
-    homeManagerModules.temmix = import ./temmix/hm;
+    homeManagerModules.temmix = import ./temmix/hm lain;
     homeManagerModules.default = self.homeManagerModules.temmix;
 
-    packages."${system}".default = builtins.derivation setwall;
+    packages."${system}".default = lain;
   };
 }
