@@ -10,8 +10,8 @@ lain: { lib, config, pkgs, ... }: {
         templates = lib.mkOption {
             type = lib.types.listOf (lib.types.submodule {
                 options = {
-                    input = lib.mkOption { type = lib.types.path; };
-                    output = lib.mkOption { type = lib.types.path; };
+                    input = lib.mkOption { type = lib.types.str; };
+                    output = lib.mkOption { type = lib.types.str; };
                 };
             });
             default = [];
