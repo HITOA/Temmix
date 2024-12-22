@@ -30,8 +30,8 @@ in
         };
         
         temmix.templates = [{ 
-            input = "${./temmix-vscode/themes/Temmix-color-theme-template.json}";
-            output =  "${./temmix-vscode/themes/Temmix-color-theme.json}";
+            input = ./temmix-vscode/themes/Temmix-color-theme-template.json; 
+            output =  ./temmix-vscode/themes/Temmix-color-theme.json;
         }];
     };
 }
