@@ -42,7 +42,7 @@ lain: { lib, config, pkgs, ... }: {
     in
     lib.mkIf config.temmix.enable 
     {
-        home.file."${cacheFile}/.keep" = {
+        home.file."${temmix.cacheFile}/.keep" = {
             enable = true;
             executable = false;
             text = "";
