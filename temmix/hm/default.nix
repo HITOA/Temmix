@@ -1,4 +1,4 @@
-{ lib, config, pkgs, ... }: {
+pkgs: { lib, config, ... }: {
     imports = [ ../../modules ];
 
     options.temmix = {
