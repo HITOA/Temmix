@@ -42,7 +42,7 @@ lain: { lib, config, pkgs, ... }: {
     in
     lib.mkIf config.temmix.enable 
     {
-        home.file = lib.attrsets.genAttrs (builtins.map (value: "${value.output}") config.temmix.templates) (name: {
+        lib.attrsets.genAttrs (builtins.map (value: "${value.output}") config.temmix.templates) (name: {
             enable = true;
             executable = false;
             text = "";
