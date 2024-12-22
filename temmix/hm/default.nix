@@ -20,9 +20,9 @@ lain: { lib, config, pkgs, ... }: {
             type = lib.types.str;
             default = "";
         };
-        configFile = lib.mkOption {
+        cacheFile = lib.mkOption {
             type = lib.types.path;
-            default = config.xdg.configFile + "/temmix";
+            default = config.xdg.cacheFile + "/temmix";
         };
     };
 
@@ -42,11 +42,11 @@ lain: { lib, config, pkgs, ... }: {
     in
     lib.mkIf config.temmix.enable 
     {
-        lib.attrsets.genAttrs (builtins.map (value: "${value.output}") config.temmix.templates) (name: {
+        home.file."${cacheFile}/.keep" = {
             enable = true;
             executable = false;
             text = "";
-        });
+        }
         home.packages = [ setwall ];
     };
 }

@@ -1,6 +1,6 @@
 { lib, config, pkgs, ... } : 
 let
-    renderedTemplatePath = config.temmix.configFile + "/vscode/Temmix-color-theme.json";
+    renderedTemplatePath = config.temmix.cacheFile + "/vscode-temmix-color-theme.json";
     themeExtension = pkgs.runCommandLocal "temmix-vscode" {
         vscodeExtUniqueId = "temmix.temmix";
         vscodeExtPublisher = "temmix";
