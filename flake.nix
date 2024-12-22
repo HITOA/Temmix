@@ -22,7 +22,7 @@
     lain = pkgs.callPackage ./lain.nix { inherit pkgs system lain-src; };
   in
   {
-    nixosModules.temmix = import ./temmix/nixos self.homeManagerModules.temmix;
+    nixosModules.temmix = import ./temmix/nixos (self.homeManagerModules.temmix lain);
     nixosModules.default = self.nixosModules.temmix;
 
     homeManagerModules.temmix = import ./temmix/hm lain;

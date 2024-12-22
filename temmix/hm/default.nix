@@ -10,14 +10,14 @@ lain: { lib, config, pkgs, ... }: {
         templates = lib.mkOption {
             type = lib.types.listOf lib.types.submodule {
                 options = {
-                    input = lib.mkOption { type = lib.types.string; };
-                    output = lib.mkOption { type = lib.types.string; };
+                    input = lib.mkOption { type = lib.types.path; };
+                    output = lib.mkOption { type = lib.types.path; };
                 };
             };
             default = [];
         };
         wallpaperCmd = lib.mkOption {
-            type = lib.types.string;
+            type = lib.types.str;
             default = "";
         };
     };
