@@ -1,6 +1,6 @@
 { lib, config, pkgs, ... } : 
 let
-    colorThemeDataPath = "/temmix/temmix-vscode-color-theme.json";
+    colorThemeDataPath = "/temmix/vscode/temmix-vscode-color-theme.json";
     colorThemePath = config.xdg.dataHome + colorThemeDataPath;
     themeExtension = pkgs.runCommandLocal "temmix-vscode" {
         vscodeExtUniqueId = "temmix.temmix";
@@ -26,8 +26,7 @@ in
         xdg.dataFile."${colorThemeDataPath}" = {
             enable = true;
             executable = false;
-            source = ./temmix-vscode/themes/Temmix-color-theme.json;
-            recursive = true;
+            text = "test";
         };
 
         programs.vscode = {
