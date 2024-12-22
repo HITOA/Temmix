@@ -4,7 +4,7 @@ homeManagerModule: { lib, config, pkgs, options, ... }: {
             type = lib.types.bool;
             description = "Wether to import temmix automatically for every Home Manager user.";
             default = true;
-        }
+        };
     };
 
     config = 
