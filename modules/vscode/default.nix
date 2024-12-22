@@ -26,7 +26,7 @@ in
         xdg.dataFile."${colorThemeDataPath}" = {
             enable = true;
             executable = false;
-            source = ./temmix-vscode/themes/Temmix-color-theme.json
+            source = ./temmix-vscode/themes/Temmix-color-theme.json;
         };
 
         programs.vscode = {
