@@ -2,11 +2,6 @@
   description = "A thmeing packaegs.";
 
   inputs = {
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     lain-src = {
       url = "github:HITOA/Lain";
       flake = false;
