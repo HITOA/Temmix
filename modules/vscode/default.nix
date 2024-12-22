@@ -21,7 +21,7 @@ in
 
     config = lib.mkIf (config.temmix.enable && config.temmix.vscode.enable)
     {
-        xdg.configFile."temmix-test.txt" = {
+        xdg.dataFile."temmix-test.txt" = {
             enable = true;
             executable = false;
             text = "some content";
