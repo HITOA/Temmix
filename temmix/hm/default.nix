@@ -38,6 +38,6 @@ lain: { lib, config, pkgs, ... }: {
     in
     lib.mkIf config.temmix.enable 
     {
-        environment.systemPackages = [ setwall ];
+        home.packages = [ setwall ];
     };
 }
