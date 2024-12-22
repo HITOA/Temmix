@@ -23,7 +23,7 @@ in
 
     config = lib.mkIf (config.temmix.enable && config.temmix.vscode.enable)
     {
-        xdg.dataFile."${colorThemeDataPath}" = {
+        xdg.dataFile."/temmix/vscode/temmix-vscode-color-theme.json" = {
             enable = true;
             executable = false;
             source = ./temmix-vscode/themes/Temmix-color-theme.json;
