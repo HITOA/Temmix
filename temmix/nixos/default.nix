@@ -1,4 +1,6 @@
-{ lib, config, pkgs, ... }: {
+homeManagerModule: { lib, config, pkgs, ... }: {
+    imports = [ (import ./hm-integration.nix homeManagerModule) ];
+
     options.temmix = {
         enable = lib.mkOption {
             type = lib.types.bool;
@@ -6,7 +8,7 @@
             default = false;
         };
     };
-    
+
     config = lib.mkIf config.temmix.enable 
     {
         
