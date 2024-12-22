@@ -16,7 +16,9 @@
     pkgs = import nixpkgs { 
       inherit system;
       overlays = [
-        (final: prev: lain = (pkgs.callPackage ./lain.nix { pkgs = prev; inherit system lain-src; }))
+        (final: prev: {
+          lain = (pkgs.callPackage ./lain.nix { pkgs = prev; inherit system lain-src; });
+        })
       ];
     };
   in
