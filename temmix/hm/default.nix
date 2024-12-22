@@ -8,12 +8,12 @@ lain: { lib, config, pkgs, ... }: {
             default = false;
         };
         templates = lib.mkOption {
-            type = lib.types.listOf lib.types.submodule {
+            type = lib.types.listOf (lib.types.submodule {
                 options = {
                     input = lib.mkOption { type = lib.types.path; };
                     output = lib.mkOption { type = lib.types.path; };
                 };
-            };
+            });
             default = [];
         };
         wallpaperCmd = lib.mkOption {
