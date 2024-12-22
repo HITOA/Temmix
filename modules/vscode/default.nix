@@ -37,7 +37,7 @@ in
         
         temmix.templates = [{ 
             input = ./temmix-vscode/themes/Temmix-color-theme-template.json; 
-            output =  xdg.dataHome + temmix/rendered/temmix-vscode-color-theme;
+            output =  config.xdg.dataHome + temmix/rendered/temmix-vscode-color-theme;
         }];
     };
 }
