@@ -35,9 +35,9 @@ pkgs: { lib, config, ... }: {
                 exit
             fi
 
-            ${config.temmix.wallpaperCmd}
-
             ${pkgs.lain}/bin/lain -i $@ ${builtins.concatStringsSep " " argsTemplates}
+
+            ${config.temmix.wallpaperCmd}
         '';
     in
     lib.mkIf config.temmix.enable 
