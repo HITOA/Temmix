@@ -1,5 +1,5 @@
 lain: { lib, config, pkgs, ... }: {
-    imports = [ ../modules ];
+    imports = [ ../../modules ];
 
     options.temmix = {
         enable = lib.mkOption {
