@@ -1,4 +1,4 @@
-lain: { lib, config, pkgs, ... }: {
+{ lib, config, pkgs, ... }: {
     imports = [ ../../modules ];
 
     options.temmix = {
@@ -37,7 +37,7 @@ lain: { lib, config, pkgs, ... }: {
 
             ${config.temmix.wallpaperCmd}
 
-            ${lain}/bin/lain -i $@ ${builtins.concatStringsSep " " argsTemplates}
+            ${pkgs.lain}/bin/lain -i $@ ${builtins.concatStringsSep " " argsTemplates}
         '';
     in
     lib.mkIf config.temmix.enable 
