@@ -575,7 +575,7 @@
 				"keyword.other"
 			],
 			"settings": {
-				"foreground": "#FF0000"
+				"foreground": "{{ makeColorLCh(text.L, 0.025, closestHUE(240).hue).hex }}"
 			}
 		},
 		{
