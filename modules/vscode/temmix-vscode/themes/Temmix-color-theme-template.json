@@ -495,7 +495,7 @@
 			"name": "Operator",
 			"scope": [
 				"keyword.control",
-				"keyword.other.template",
+				"constant.other.color",
 				"meta.tag",
 				"keyword.other.substitution"
 			],
@@ -506,7 +506,7 @@
 		{
 			"name": "Macro",
 			"scope": [
-				"constant.other.color"
+				"keyword.other.template"
 			],
 			"settings": {
 				"foreground": "#FF0000"
