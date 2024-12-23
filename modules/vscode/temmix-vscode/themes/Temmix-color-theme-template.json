@@ -508,7 +508,7 @@
 				"keyword.other.substitution"
 			],
 			"settings": {
-				"foreground": "{{ makeColorLCh(text.L, 0.01, text.hue).hex }}"
+				"foreground": "#FF0000"
 			}
 		},
 		{
