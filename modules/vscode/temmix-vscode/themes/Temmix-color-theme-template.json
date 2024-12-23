@@ -488,7 +488,7 @@
 				"storage.modifier"
 			],
 			"settings": {
-				"foreground": "{{ makeColorLCh(text.L, 0.2, closestHUE(315).hue).hex }}"
+				"foreground": "{{ makeColorLCh(text.L, 0.2, 315).hex }}"
 			}
 		},
 		{
@@ -532,7 +532,7 @@
 				"keyword.other.special-method"
 			],
 			"settings": {
-				"foreground": "#82AAFF"
+				"foreground": "{{ makeColorLCh(text.L, 0.2, 90).hex }}"
 			}
 		},
 		{
