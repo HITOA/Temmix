@@ -24,23 +24,23 @@ tab_bar_background {{ surface0.hex }}
 # The 16 terminal colors
 # normal
 color0 {{ background.hex }}
-color1 {{ makeColorLCh(0.55, primary.C, primary.hue) }}
-color2 {{ makeColorLCh(0.55, accent0.C, accent0.hue) }}
-color3 {{ makeColorLCh(0.55, accent1.C, accent1.hue) }}
-color4 {{ makeColorLCh(0.55, accent2.C, accent2.hue) }}
-color5 {{ makeColorLCh(0.55, accent3.C, accent3.hue) }}
-color6 {{ makeColorLCh(0.55, accent4.C, accent4.hue) }}
-color7 {{ makeColorLCh(0.55, accent5.C, accent5.hue) }}
+color1 {{ makeColorLCh(0.55, primary.C, primary.hue).hex }}
+color2 {{ makeColorLCh(0.55, accent0.C, accent0.hue).hex }}
+color3 {{ makeColorLCh(0.55, accent1.C, accent1.hue).hex }}
+color4 {{ makeColorLCh(0.55, accent2.C, accent2.hue).hex }}
+color5 {{ makeColorLCh(0.55, accent3.C, accent3.hue).hex }}
+color6 {{ makeColorLCh(0.55, accent4.C, accent4.hue).hex }}
+color7 {{ makeColorLCh(0.55, accent5.C, accent5.hue).hex }}
 
 # bright
 color8  {{ text.hex }}
-color9  {{ makeColorLCh(0.75, primary.C, primary.hue) }}
-color10 {{ makeColorLCh(0.75, accent0.C, accent0.hue) }}
-color11 {{ makeColorLCh(0.75, accent1.C, accent1.hue) }}
-color12 {{ makeColorLCh(0.75, accent2.C, accent2.hue) }}
-color13 {{ makeColorLCh(0.75, accent3.C, accent3.hue) }}
-color14 {{ makeColorLCh(0.75, accent4.C, accent4.hue) }}
-color15 {{ makeColorLCh(0.75, accent5.C, accent5.hue) }}
+color9  {{ makeColorLCh(0.75, primary.C, primary.hue).hex }}
+color10 {{ makeColorLCh(0.75, accent0.C, accent0.hue).hex }}
+color11 {{ makeColorLCh(0.75, accent1.C, accent1.hue).hex }}
+color12 {{ makeColorLCh(0.75, accent2.C, accent2.hue).hex }}
+color13 {{ makeColorLCh(0.75, accent3.C, accent3.hue).hex }}
+color14 {{ makeColorLCh(0.75, accent4.C, accent4.hue).hex }}
+color15 {{ makeColorLCh(0.75, accent5.C, accent5.hue).hex }}
 
 # extended base16 colors
 color16 #e8bbd0
