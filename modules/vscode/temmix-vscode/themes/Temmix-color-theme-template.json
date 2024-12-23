@@ -606,7 +606,7 @@
 				"support.type.sys-types"
 			],
 			"settings": {
-				"foreground": "{{ makeColorLCh(text.L * 0.95, 0.2, closestHUE(140).hue).hex }}"
+				"foreground": "{{ makeColorLCh(text.L * 0.95, 0.2, closestHUE(130).hue).hex }}"
 			}
 		},
 		{
