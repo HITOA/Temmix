@@ -16,9 +16,9 @@ pkgs: { lib, config, ... }: {
             });
             default = [];
         };
-        wallpaperCmd = lib.mkOption {
-            type = lib.types.str;
-            default = "";
+        commands = lib.mkOption {
+            type = lib.types.listOf lib.str;
+            default = [];
         };
         cacheFile = lib.mkOption {
             type = lib.types.path;
@@ -34,10 +34,10 @@ pkgs: { lib, config, ... }: {
                 echo "Missing filename."
                 exit
             fi
-
+            
             ${pkgs.lain}/bin/lain -i $@ ${builtins.concatStringsSep " " argsTemplates}
 
-            ${config.temmix.wallpaperCmd}
+            ${builtins.concatStringsSep "\n" config.temmix.commands}
         '';
     in
     lib.mkIf config.temmix.enable 

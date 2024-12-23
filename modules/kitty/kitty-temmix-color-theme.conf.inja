@@ -4,8 +4,8 @@ foreground {{ text.hex }}
 selection_background {{ background.hex }}
 selection_foreground {{ makeColorLCh(text.L * 1.1, text.C, text.hue).hex }}
 
-cursor {{ surface3.hex }}
-cursor_text_color {{ surface2.hex }}
+cursor {{ surface2.hex }}
+cursor_text_color {{ surface1.hex }}
 
 url_color {{ closestHUE(230).hex }}
 
