@@ -14,9 +14,9 @@ in
 	config = lib.mkIf (config.temmix.enable && config.temmix.terminal.enable)
 	{
 		temmix.commands = [''
-			for i in "/dev/pts/[0-9]*"; do
-				source ${renderedTemplatePath} | tee $\{i\}
-			done
+for i in "/dev/pts/[0-9]*"; do
+	source ${renderedTemplatePath} | tee ''${i}
+done
     	''];
 
 		temmix.templates = [{ 
