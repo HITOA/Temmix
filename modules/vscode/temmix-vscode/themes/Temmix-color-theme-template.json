@@ -532,7 +532,7 @@
 				"keyword.other.special-method"
 			],
 			"settings": {
-				"foreground": "{{ makeColorLCh(text.L, 0.15, 90).hex }}"
+				"foreground": "{{ makeColorLCh(text.L, 0.10, 90).hex }}"
 			}
 		},
 		{
