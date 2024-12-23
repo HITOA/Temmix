@@ -13,7 +13,7 @@ in
 
 	config = lib.mkIf (config.temmix.enable && config.temmix.terminal.enable)
 	{
-		config.temmix.commands = [''
+		temmix.commands = [''
       source ${renderedTemplatePath}
     ''];
 

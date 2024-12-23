@@ -13,7 +13,7 @@ in
 
 	config = lib.mkIf (config.temmix.enable && config.temmix.kitty.enable)
 	{
-		config.temmix.terminal.enable = true;
+		temmix.terminal.enable = true;
 
 		programs.kitty = {
 			settings.background_opacity = "${builtins.toString config.temmix.opacity.terminal}";
