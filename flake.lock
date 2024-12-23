@@ -3,11 +3,11 @@
     "lain-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1734967888,
-        "narHash": "sha256-sNtFGRAHbej8aMM1YV82x5EG1gJ8/fDh97jQDO8JVj4=",
+        "lastModified": 1734968791,
+        "narHash": "sha256-vJu9EaLOqNj4uhR1tPBeJEkHucvr4DhqPMnBecXsgbU=",
         "owner": "HITOA",
         "repo": "Lain",
-        "rev": "67dbaf52408f9af8968922b35029c679b183cec1",
+        "rev": "fa8547bcd728a50b39d8d63d1c96b2702f5124ac",
         "type": "github"
       },
       "original": {
