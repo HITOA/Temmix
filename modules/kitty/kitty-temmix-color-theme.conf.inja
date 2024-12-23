@@ -1,0 +1,51 @@
+
+background {{ foreground.hex }}
+foreground {{ background.hex }}
+selection_background {{ surface0.hex }}
+selection_foreground {{ surface1.hex }}
+
+cursor {{ surface3.hex }}
+cursor_text_color {{ surface2.hex }}
+
+url_color {{ closestHUE(230).hex }}
+
+active_border_color {{ surface2.hex }}
+inactive_border_color {{ surface1.hex }}
+
+wayland_titlebar_color {{ background.hex }}
+macos_titlebar_color {{ background.hex }}
+
+active_tab_background {{ foreground.hex }}
+active_tab_foreground {{ background.hex }}
+inactive_tab_background {{ surface0.hex }}
+inactive_tab_foreground {{ surface1.hex }}
+tab_bar_background {{ surface0.hex }}
+
+# The 16 terminal colors
+# normal
+color0 {{ background.hex }}
+color1 {{ makeColorLCh(0.55, primary.C, primary.hue) }}
+color2 {{ makeColorLCh(0.55, accent0.C, accent0.hue) }}
+color3 {{ makeColorLCh(0.55, accent1.C, accent1.hue) }}
+color4 {{ makeColorLCh(0.55, accent2.C, accent2.hue) }}
+color5 {{ makeColorLCh(0.55, accent3.C, accent3.hue) }}
+color6 {{ makeColorLCh(0.55, accent4.C, accent4.hue) }}
+color7 {{ makeColorLCh(0.55, accent5.C, accent5.hue) }}
+
+# bright
+color8  {{ text.hex }}
+color9  {{ makeColorLCh(0.75, primary.C, primary.hue) }}
+color10 {{ makeColorLCh(0.75, accent0.C, accent0.hue) }}
+color11 {{ makeColorLCh(0.75, accent1.C, accent1.hue) }}
+color12 {{ makeColorLCh(0.75, accent2.C, accent2.hue) }}
+color13 {{ makeColorLCh(0.75, accent3.C, accent3.hue) }}
+color14 {{ makeColorLCh(0.75, accent4.C, accent4.hue) }}
+color15 {{ makeColorLCh(0.75, accent5.C, accent5.hue) }}
+
+# extended base16 colors
+color16 #e8bbd0
+color17 #cdab53
+color18 #3a3432
+color19 #4a4543
+color20 #807d7c
+color21 #d6d5d4
