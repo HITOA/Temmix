@@ -590,7 +590,7 @@
 				"meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
 			],
 			"settings": {
-				"foreground": "{{ makeColorLCh(text.L, 0.15, closestHUE(95).hue).hex }}"
+				"foreground": "{{ makeColorLCh(text.L, 0.10, closestHUE(70).hue).hex }}"
 			}
 		},
 		{
@@ -606,7 +606,7 @@
 				"support.type.sys-types"
 			],
 			"settings": {
-				"foreground": "{{ makeColorLCh(text.L * 0.95, 0.2, closestHUE(120).hue).hex }}"
+				"foreground": "{{ makeColorLCh(text.L * 0.95, 0.2, closestHUE(150).hue).hex }}"
 			}
 		},
 		{
