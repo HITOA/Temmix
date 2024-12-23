@@ -495,9 +495,9 @@
 			"name": "Operator",
 			"scope": [
 				"keyword.control",
-				"constant.other.color",
 				"keyword.other.template",
-				"meta.tag"
+				"meta.tag",
+				"keyword.other.substitution"
 			],
 			"settings": {
 				"foreground": "{{ makeColorLCh(text.L * 0.95, 0.2, 315).hex }}"
@@ -506,7 +506,7 @@
 		{
 			"name": "Macro",
 			"scope": [
-				"keyword.other.substitution"
+				"constant.other.color"
 			],
 			"settings": {
 				"foreground": "#FF0000"
