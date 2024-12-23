@@ -488,7 +488,7 @@
 				"storage.modifier"
 			],
 			"settings": {
-				"foreground": "{{ makeColorLCh(text.L, 0.2, 315).hex }}"
+				"foreground": "{{ makeColorLCh(text.L, 0.2, 305).hex }}"
 			}
 		},
 		{
@@ -532,7 +532,7 @@
 				"keyword.other.special-method"
 			],
 			"settings": {
-				"foreground": "{{ makeColorLCh(text.L, 0.2, 90).hex }}"
+				"foreground": "{{ makeColorLCh(text.L, 0.15, 90).hex }}"
 			}
 		},
 		{
