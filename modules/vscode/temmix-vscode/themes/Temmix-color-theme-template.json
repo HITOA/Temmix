@@ -448,7 +448,7 @@
 			],
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "{{ makeColorLCh(surface3.L, 0.2, closestHUE(140).hue).hex }}"
+				"foreground": "{{ makeColorLCh(surface3.L, 0.05, closestHUE(140).hue).hex }}"
 			}
 		},
 		{
