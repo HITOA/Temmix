@@ -477,7 +477,7 @@
 				"invalid.illegal"
 			],
 			"settings": {
-				"foreground": "{{ makeColorLCh(text.L, 0.2, 30).hex }}"
+				"foreground": "{{ makeColorLCh(text.L, 0.2, 20).hex }}"
 			}
 		},
 		{
@@ -488,7 +488,7 @@
 				"storage.modifier"
 			],
 			"settings": {
-				"foreground": "{{ makeColorLCh(text.L, averageAccentChroma, closestHUE(315).hue).hex }}"
+				"foreground": "{{ makeColorLCh(text.L, 0.2, closestHUE(315).hue).hex }}"
 			}
 		},
 		{
