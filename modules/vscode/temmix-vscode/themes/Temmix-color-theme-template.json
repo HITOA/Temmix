@@ -615,7 +615,7 @@
 				"support.type"
 			],
 			"settings": {
-				"foreground": "#B2CCD6"
+				"foreground": "{{ makeColorLCh(text.L, 0.1, closestHUE(240).hue).hex }}"
 			}
 		},
 		{
