@@ -496,19 +496,27 @@
 			"scope": [
 				"keyword.control",
 				"constant.other.color",
-				"punctuation",
 				"meta.tag",
+				"keyword.other.template",
+				"keyword.other.substitution"
+			],
+			"settings": {
+				"foreground": "{{ makeColorLCh(text.L, 0.2, 305).hex }}"
+			}
+		},
+		{
+			"name": "Operator, Misc",
+			"scope": [
+				"punctuation",
 				"punctuation.definition.tag",
 				"punctuation.separator.inheritance.php",
 				"punctuation.definition.tag.html",
 				"punctuation.definition.tag.begin.html",
 				"punctuation.definition.tag.end.html",
 				"punctuation.section.embedded",
-				"keyword.other.template",
-				"keyword.other.substitution"
 			],
 			"settings": {
-				"foreground": "#FF0000"
+				"foreground": "{{ makeColorLCh(text.L, 0.01, text.hue).hex }}"
 			}
 		},
 		{
