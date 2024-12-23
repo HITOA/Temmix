@@ -14,8 +14,10 @@ in
 	config = lib.mkIf (config.temmix.enable && config.temmix.terminal.enable)
 	{
 		temmix.commands = [''
-      source ${renderedTemplatePath}
-    ''];
+			for i in "/dev/pts/[0-9]*"; do
+				source ${renderedTemplatePath} | tee ${i}
+			done
+    	''];
 
 		temmix.templates = [{ 
 			input = ./set-terminal-color.sh.inja; 
