@@ -492,7 +492,7 @@
 			}
 		},
 		{
-			"name": "Operator, Misc",
+			"name": "Operator",
 			"scope": [
 				"keyword.control",
 				"constant.other.color",
@@ -501,11 +501,11 @@
 				"keyword.other.substitution"
 			],
 			"settings": {
-				"foreground": "{{ makeColorLCh(text.L, 0.2, 305).hex }}"
+				"foreground": "{{ makeColorLCh(text.L * 0.8, 0.22, 305).hex }}"
 			}
 		},
 		{
-			"name": "Operator, Misc",
+			"name": "Misc",
 			"scope": [
 				"punctuation",
 				"punctuation.definition.tag",
