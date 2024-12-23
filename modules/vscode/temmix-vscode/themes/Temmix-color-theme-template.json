@@ -458,7 +458,7 @@
 				"string constant.other.placeholder"
 			],
 			"settings": {
-				"foreground": "#EEFFFF"
+				"foreground": "{{ makeColorLCh(text.L, 0.05, closestHUE(240).hue).hex }}"
 			}
 		},
 		{
@@ -477,7 +477,7 @@
 				"invalid.illegal"
 			],
 			"settings": {
-				"foreground": "#FF5370"
+				"foreground": "{{ makeColorLCh(text.L, 0.3, 30).hex }}"
 			}
 		},
 		{
