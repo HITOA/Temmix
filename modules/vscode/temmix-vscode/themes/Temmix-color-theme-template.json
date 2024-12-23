@@ -448,7 +448,7 @@
 			],
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#546E7A"
+				"foreground": "{{ makeColorLCh(surface4.L, 0.2, closestHUE(140).hue) }}"
 			}
 		},
 		{
