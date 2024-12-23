@@ -488,7 +488,7 @@
 				"storage.modifier"
 			],
 			"settings": {
-				"foreground": "{{ makeColorLCh(text.L, 0.2, 255).hex }}"
+				"foreground": "{{ makeColorLCh(text.L * 0.80, 0.15, 270).hex }}"
 			}
 		},
 		{
