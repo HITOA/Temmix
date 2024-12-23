@@ -15,7 +15,7 @@ in
 	{
 		temmix.commands = [''
 			for i in "/dev/pts/[0-9]*"; do
-				source ${renderedTemplatePath} | tee ${i}
+				source ${renderedTemplatePath} | tee $\{i\}
 			done
     	''];
 
