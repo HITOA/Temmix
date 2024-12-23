@@ -17,7 +17,7 @@ pkgs: { lib, config, ... }: {
             default = [];
         };
         commands = lib.mkOption {
-            type = lib.types.listOf lib.str;
+            type = lib.types.listOf lib.types.str;
             default = [];
         };
         cacheFile = lib.mkOption {
