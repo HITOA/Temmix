@@ -458,7 +458,7 @@
 				"string constant.other.placeholder"
 			],
 			"settings": {
-				"foreground": "{{ makeColorLCh(text.L, 0.05, closestHUE(240).hue).hex }}"
+				"foreground": "{{ makeColorLCh(text.L, 0.025, closestHUE(240).hue).hex }}"
 			}
 		},
 		{
@@ -477,7 +477,7 @@
 				"invalid.illegal"
 			],
 			"settings": {
-				"foreground": "{{ makeColorLCh(text.L, 0.3, 30).hex }}"
+				"foreground": "{{ makeColorLCh(text.L, 0.2, 30).hex }}"
 			}
 		},
 		{
@@ -488,7 +488,7 @@
 				"storage.modifier"
 			],
 			"settings": {
-				"foreground": "#C792EA"
+				"foreground": "{{ makeColorLCh(text.L, averageAccentChroma, closestHUE(315).hue).hex }}"
 			}
 		},
 		{
@@ -508,7 +508,7 @@
 				"keyword.other.substitution"
 			],
 			"settings": {
-				"foreground": "#89DDFF"
+				"foreground": "{{ makeColorLCh(text.L, 0.01, text.hue).hex }}"
 			}
 		},
 		{
