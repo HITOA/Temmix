@@ -559,7 +559,7 @@
 				"string.other.link"
 			],
 			"settings": {
-				"foreground": "#FF0000"
+				"foreground": "{{ makeColorLCh(text.L * 0.80, 0.2, 250).hex }}"
 			}
 		},
 		{
