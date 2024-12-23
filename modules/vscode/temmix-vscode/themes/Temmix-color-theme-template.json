@@ -448,7 +448,7 @@
 			],
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "{{ makeColorLCh(surface3.L, 0.2, closestHUE(140).hue) }}" //test uwu
+				"foreground": "{{ makeColorLCh(0.6, 0.5, 30) }}"//"{{ makeColorLCh(surface3.L, 0.2, closestHUE(140).hue) }}" //test uwu
 			}
 		},
 		{
