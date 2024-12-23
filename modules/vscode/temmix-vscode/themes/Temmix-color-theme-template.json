@@ -496,20 +496,12 @@
 			"scope": [
 				"keyword.control",
 				"constant.other.color",
+				"keyword.other.template",
 				"meta.tag",
 				"keyword.other.substitution"
 			],
 			"settings": {
 				"foreground": "{{ makeColorLCh(text.L * 0.95, 0.2, 315).hex }}"
-			}
-		},
-		{
-			"name": "Macro",
-			"scope": [
-				"keyword.other.template"
-			],
-			"settings": {
-				"foreground": "#FF0000"
 			}
 		},
 		{
@@ -567,7 +559,7 @@
 				"string.other.link"
 			],
 			"settings": {
-				"foreground": "#f07178"
+				"foreground": "#FF0000"
 			}
 		},
 		{
