@@ -497,7 +497,7 @@
 				"keyword.control",
 				"constant.other.color",
 				"keyword.other.template",
-				"keyword.other.substitution"
+				"meta.tag"
 			],
 			"settings": {
 				"foreground": "{{ makeColorLCh(text.L * 0.95, 0.2, 315).hex }}"
@@ -506,7 +506,7 @@
 		{
 			"name": "Macro",
 			"scope": [
-				"meta.tag"
+				"keyword.other.substitution"
 			],
 			"settings": {
 				"foreground": "#FF0000"
