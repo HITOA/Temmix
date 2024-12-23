@@ -505,15 +505,24 @@
 			}
 		},
 		{
+			"name": "Macro",
+			"scope": [
+				"meta.tag",
+				"punctuation.definition.tag"
+			],
+			"settings": {
+				"foreground": "#FF0000"
+			}
+		},
+		{
 			"name": "Misc",
 			"scope": [
 				"punctuation",
-				"punctuation.definition.tag",
 				"punctuation.separator.inheritance.php",
 				"punctuation.definition.tag.html",
 				"punctuation.definition.tag.begin.html",
 				"punctuation.definition.tag.end.html",
-				"punctuation.section.embedded",
+				"punctuation.section.embedded"
 			],
 			"settings": {
 				"foreground": "{{ makeColorLCh(text.L, 0.01, text.hue).hex }}"
