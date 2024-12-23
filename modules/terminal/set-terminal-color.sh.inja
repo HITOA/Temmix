@@ -1,0 +1,20 @@
+printf "\033]4;0;#{{ background.hex }}\033\\"
+printf "\033]4;1;#{{ makeColorLCh(0.55, primary.C, primary.hue).hex }}\033\\"
+printf "\033]4;2;#{{ makeColorLCh(0.55, accent0.C, accent0.hue).hex }}\033\\"
+printf "\033]4;3;#{{ makeColorLCh(0.55, accent1.C, accent1.hue).hex }}\033\\"
+printf "\033]4;4;#{{ makeColorLCh(0.55, accent2.C, accent2.hue).hex }}\033\\"
+printf "\033]4;5;#{{ makeColorLCh(0.55, accent3.C, accent3.hue).hex }}\033\\"
+printf "\033]4;6;#{{ makeColorLCh(0.55, accent4.C, accent4.hue).hex }}\033\\"
+printf "\033]4;7;#{{ makeColorLCh(0.55, accent5.C, accent5.hue).hex }}\033\\"
+printf "\033]4;8;#{{ text.hex }}\033\\"
+printf "\033]4;9;#{{ makeColorLCh(0.75, primary.C, primary.hue).hex }}\033\\"
+printf "\033]4;10;#{{ makeColorLCh(0.75, accent0.C, accent0.hue).hex }}\033\\"
+printf "\033]4;11;#{{ makeColorLCh(0.75, accent1.C, accent1.hue).hex }}\033\\"
+printf "\033]4;12;#{{ makeColorLCh(0.75, accent2.C, accent2.hue).hex }}\033\\"
+printf "\033]4;13;#{{ makeColorLCh(0.75, accent3.C, accent3.hue).hex }}\033\\"
+printf "\033]4;14;#{{ makeColorLCh(0.75, accent4.C, accent4.hue).hex }}\033\\"
+printf "\033]4;15;#{{ makeColorLCh(0.75, accent5.C, accent5.hue).hex }}\033\\"
+printf "\033]11;#{{ foreground.hex }}\033\\";
+printf "\033]10;#{{ text.hex }}\033\\";
+printf "\033]12;#{{ surface2.hex }}\033\\";
+printf "\033]7044;#{{ surface2.hex }}\033\\";
