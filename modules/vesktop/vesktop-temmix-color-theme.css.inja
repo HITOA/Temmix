@@ -2,10 +2,10 @@
     --background: {{ background.hex }};
     --foreground: {{ foreground.hex }};
     --surface0: {{ surface0.hex }};
-    --surface1: {{ surface1.hex }};/
+    --surface1: {{ surface1.hex }};
     --surface2: {{ surface2.hex }};
     --surface3: {{ surface3.hex }};
-    --subtext: {{ subtext.hex }}; */
+    --subtext: {{ subtext.hex }};
     --text: {{ text.hex }};    
     --primary: {{ primary.hex }}; 
     --accent0: {{ accent0.hex }}; 
