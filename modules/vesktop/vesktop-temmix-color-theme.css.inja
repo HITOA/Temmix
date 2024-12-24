@@ -26,10 +26,10 @@
     --home-background: var(--foreground);
     --bg-overlay-chat : var(--surface0);
     --background-primary: var(--surface1);
-    --background-secondary: #FF0000; //var(--foreground);
-    --background-secondary-alt: #00FF00; //var(--surface0);
+    --background-secondary: var(--background);
+    --background-secondary-alt: var(--foreground);
     --channeltextarea-background: var(--background);
-    --background-tertiary: #0000FF; //var(--surface1);
+    --background-tertiary: var(--foreground);
     --background-accent: var(--primary);
     --background-floating: var(--background);
     --background-modifier-hover: #{{ foreground.hex }}4c;
