@@ -16,7 +16,7 @@ in
     xdg.configFile."vesktop/themes/temmix.theme.css" = {
       enable = true;
       source = renderedTemplatePath;
-    }
+    };
 
 		temmix.templates = [{ 
 			input = ./vesktop-temmix-color-theme.css.inja; 
