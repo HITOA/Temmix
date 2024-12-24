@@ -38,12 +38,12 @@
     --text-secondary: var(--subtext);
     --text-muted: var(--surface3);
     --text-link: var(--accent1);
-    --interactive-normal: #0000FF; //var(--surface3);
+    --interactive-normal: var(--surface3);
     --interactive-hover: var(--text);
     --interactive-active: var(--subtext);
     --interactive-muted: var(--surface3);
-    --channels-default: #FF0000; //var(--surface2);
-    --channel-icon: ##00FF00; //var(--surface2);
+    --channels-default: var(--surface3);
+    --channel-icon: var(--surface3);
     --header-primary: var(--surface3);
     --header-secondary: var(--surface2);
     --scrollbar-thin-track: transparent;
