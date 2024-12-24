@@ -13,7 +13,7 @@ in
 
 	config = lib.mkIf (config.temmix.enable && config.temmix.vesktop.enable)
 	{
-    home.file."${xdg.configHome}/vesktop/themes/temmix.theme.css" = {
+    home.file."${config.xdg.configHome}/vesktop/themes/temmix.theme.css" = {
       enable = true;
       source = renderedTemplatePath;
     };
