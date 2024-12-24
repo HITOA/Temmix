@@ -15,7 +15,7 @@ in
 	{
     temmix.commands = [''
       mkdir -p ~/.config/vesktop/themes
-      ln -s ${renderedTemplatePath} ~/.config/vesktop/themes/temmix.theme.css
+      ln -sf ${renderedTemplatePath} ~/.config/vesktop/themes/temmix.theme.css
     ''];
 
 		temmix.templates = [{ 
