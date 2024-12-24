@@ -41,7 +41,7 @@
     --interactive-normal: var(--surface3);
     --interactive-hover: var(--text);
     --interactive-active: var(--subtext);
-    --interactive-muted: var(--surface2);
+    --interactive-muted: var(--surface3);
     --channels-default: var(--surface2);
     --channel-icon: var(--surface2);
     --header-primary: var(--surface3);
