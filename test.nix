@@ -1,3 +1,3 @@
 attrs: { lib, ... }: {
-  a = lib.isAttrs attrs;
+  a = lib.mkIf (lib.isAttrs attrs) (builtins.)
 }

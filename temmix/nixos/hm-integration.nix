@@ -1,11 +1,11 @@
 homeManagerModule: { lib, config, pkgs, options, ... }: 
 let
-    #paths = builtins.map (value: ["temmix"] ++ value) (lib.collect lib.isList (lib.mapAttrsRecursive (key: value: key) config.temmix));
+    paths = { osConfig, ... }: builtins.map (value: ["temmix"] ++ value) (lib.collect lib.isList (lib.mapAttrsRecursive (key: value: key) osConfig.temmix));
     copyModule = builtins.map (
         path:
         { config, osConfig, ... }:
         lib.setAttrByPath path (lib.mkDefault (lib.getAttrFromPath path osConfig))
-    ) [ ["temmix" "enable"] ];
+    ) paths;
 in
 {
     options.temmix.hm = {
