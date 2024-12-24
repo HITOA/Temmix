@@ -1,8 +1,0 @@
-{ ... }:
-{
-    imports = [
-        ./vscode
-        ./kitty
-        ./terminal
-    ];
-}

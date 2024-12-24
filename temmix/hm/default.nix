@@ -1,5 +1,5 @@
 pkgs: { lib, config, ... }: {
-    imports = [ ../../modules ./opacity.nix ];
+    imports = [ ../../modules/hm.nix ./opacity.nix ];
 
     options.temmix = {
         enable = lib.mkOption {
