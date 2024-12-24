@@ -5,7 +5,7 @@ let
         path:
         { config, osConfig, ... }:
         lib.setAttrByPath path (lib.mkDefault (lib.getAttrFromPath path osConfig))
-    ) [ "temmix" "enable" ];
+    ) [ ["temmix" "enable"] ];
 in
 {
     options.temmix.hm = {
