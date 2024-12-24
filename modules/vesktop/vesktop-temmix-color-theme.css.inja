@@ -4,8 +4,8 @@
     --base02: {{ surface0.hex }};   /* Grey */
     --base03: {{ surface1.hex }};   /* Brighter Grey */
     --base04: {{ surface2.hex }};   /* Bright Grey */
-    --base05: {{ surface3.hex }};   /* White */
-    --base06: {{ subtext.hex }};    /* Brighter White */
+    --base05: {{ subtext.hex }};    /* White */
+    --base06: {{ text.hex }};       /* Brighter White */
     --base07: {{ text.hex }};       /* Bright White */
     --base08: {{ primary.hex }};    /* Red */
     --base09: {{ accent0.hex }};    /* Orange */
