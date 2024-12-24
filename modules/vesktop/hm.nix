@@ -14,6 +14,7 @@ in
 	config = lib.mkIf (config.temmix.enable && config.temmix.vesktop.enable)
 	{
     temmix.commands = [''
+      mkdir -p ~/.config/vesktop/themes
       ln -s ${renderedTemplatePath} ~/.config/vesktop/themes/temmix.theme.css
     ''];
 
