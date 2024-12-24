@@ -13,10 +13,14 @@ in
 
 	config = lib.mkIf (config.temmix.enable && config.temmix.vesktop.enable)
 	{
-    temmix.commands = [''
-      mkdir -p ~/.config/vesktop/themes
-      ln -sf ${renderedTemplatePath} ~/.config/vesktop/themes/temmix.theme.css
-    ''];
+    home.packages = [
+      pkgs.runCommandLocal "Vesktop" {
+        inherit (xdg) configHome;
+      } ''
+        mkdir -p $configHome/vesktop/themes
+        ln -sf ${renderedTemplatePath} $configHome/vesktop/themes/temmix.theme.css
+      '';
+    ];
 
 		temmix.templates = [{ 
 			input = ./vesktop-temmix-color-theme.css.inja; 
