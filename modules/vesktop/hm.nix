@@ -19,6 +19,7 @@ in
       } ''
         mkdir -p $configHome/vesktop/themes
         ln -sf ${renderedTemplatePath} $configHome/vesktop/themes/temmix.theme.css
+        touch $out/.keep
       '';
     ];
 
