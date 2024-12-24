@@ -13,10 +13,9 @@ in
 
 	config = lib.mkIf (config.temmix.enable && config.temmix.vesktop.enable)
 	{
-    home.file."${config.xdg.configHome}/vesktop/themes/temmix.theme.css" = {
-      enable = true;
-      source = renderedTemplatePath;
-    };
+    temmix.commands = [''
+      ln -s ${renderedTemplatePath} ~/.config/vesktop/themes/temmix.theme.css
+    ''];
 
 		temmix.templates = [{ 
 			input = ./vesktop-temmix-color-theme.css.inja; 
