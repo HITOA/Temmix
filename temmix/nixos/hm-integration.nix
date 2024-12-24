@@ -4,7 +4,7 @@ let
         path:
         { config, osConfig, ... }:
         lib.setAttrByPath path (lib.mkDefault (lib.getAttrFromPath path osConfig))
-    ) builtins.map (value: ["temmix"] ++ value) (lib.collect lib.isList (lib.mapAttrsRecursive (key: value: key) config.temmix));
+    ) (builtins.map (value: ["temmix"] ++ value) (lib.collect lib.isList (lib.mapAttrsRecursive (key: value: key) config.temmix)));
 in
 {
     options.temmix.hm = {
