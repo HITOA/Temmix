@@ -32,7 +32,7 @@
     --background-tertiary: var(--base00);
     --background-accent: var(--base0E);
     --background-floating: var(--base01);
-    --background-modifier-hover: #{{base00-hex}}4c; /* 30% of base00 */
+    --background-modifier-hover: #{{ foreground.hex }}4c; /* 30% of base00 */
     --background-modifier-selected: var(--base00);
     --text-normal: var(--base05);
     --text-secondary: var(--base03);
