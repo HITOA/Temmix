@@ -15,7 +15,7 @@ in
   let
     vesktopTheme = pkgs.runCommandLocal "temmix-vesktop-theme" 
     {
-      inherit (xdg) configHome;
+      inherit (config.xdg) configHome;
     } ''
       mkdir -p $configHome/vesktop/themes
       ln -sf ${renderedTemplatePath} $configHome/vesktop/themes/temmix.theme.css
