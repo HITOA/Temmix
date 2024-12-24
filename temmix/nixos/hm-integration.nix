@@ -1,4 +1,12 @@
-homeManagerModule: { lib, config, pkgs, options, ... }: {
+homeManagerModule: { lib, config, pkgs, options, ... }: 
+let
+    copyModule = { lib, osConfig, ... }: {
+        config = {
+            temmix = lib.mkMerge [ temmix osConfig.temmix ];
+        };
+    };
+in
+{
     options.temmix.hm = {
         autoImport = lib.mkOption {
             type = lib.types.bool;
@@ -11,6 +19,6 @@ homeManagerModule: { lib, config, pkgs, options, ... }: {
     lib.optionalAttrs (options ? home-manager)
     (lib.mkIf config.temmix.hm.autoImport
     {
-        home-manager.sharedModules = [ homeManagerModule ];
+        home-manager.sharedModules = [ homeManagerModule copyModule ];
     });
 }

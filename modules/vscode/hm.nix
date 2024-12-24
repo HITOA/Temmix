@@ -12,7 +12,7 @@ let
     '';
 in
 {
-    options.temmix.vscode = {
+    options.temmix.targets.vscode = {
         enable = lib.mkOption {
             type = lib.types.bool;
             description = "Enable theming for VSCode.";
@@ -20,7 +20,7 @@ in
         };
     };
 
-    config = lib.mkIf (config.temmix.enable && config.temmix.vscode.enable)
+    config = lib.mkIf (config.temmix.enable && config.temmix.targets.vscode.enable)
     {
         programs.vscode = {
             extensions = [ themeExtension ];

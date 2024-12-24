@@ -3,7 +3,7 @@ let
   	renderedTemplatePath = config.temmix.cacheFile + "/kitty-temmix-color-theme.conf";
 in
 {
-	options.temmix.kitty = {
+	options.temmix.targets.kitty = {
 		enable = lib.mkOption {
 			type = lib.types.bool;
 			description = "Enable theming for Kitty Terminal.";
@@ -11,7 +11,7 @@ in
 		};
 	};
 
-	config = lib.mkIf (config.temmix.enable && config.temmix.kitty.enable)
+	config = lib.mkIf (config.temmix.enable && config.temmix.targets.kitty.enable)
 	{
 		temmix.terminal.enable = true;
 

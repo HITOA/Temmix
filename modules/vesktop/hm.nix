@@ -3,7 +3,7 @@ let
   	renderedTemplatePath = config.temmix.cacheFile + "/vesktop-temmix-color-theme.css";
 in
 {
-	options.temmix.vesktop = {
+	options.temmix.targets.vesktop = {
 		enable = lib.mkOption {
 			type = lib.types.bool;
 			description = "Enable theming for Vesktop.";
@@ -11,7 +11,7 @@ in
 		};
 	};
 
-	config = lib.mkIf (config.temmix.enable && config.temmix.vesktop.enable)
+	config = lib.mkIf (config.temmix.enable && config.temmix.targets.vesktop.enable)
 	{
     xdg.configFile."vesktop/themes/.keep" = {
       enable = true;

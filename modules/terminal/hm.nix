@@ -3,7 +3,7 @@ let
   	renderedTemplatePath = config.temmix.cacheFile + "/set-terminal-color.sh";
 in
 {
-	options.temmix.terminal = {
+	options.temmix.targets.terminal = {
 		enable = lib.mkOption {
 			type = lib.types.bool;
 			description = "Enable theming for Any Terminal.";
@@ -11,7 +11,7 @@ in
 		};
 	};
 
-	config = lib.mkIf (config.temmix.enable && config.temmix.terminal.enable)
+	config = lib.mkIf (config.temmix.enable && config.temmix.targets.terminal.enable)
 	{
 		temmix.commands = [''
 for i in "/dev/pts/[0-9]*"; do

@@ -1,5 +1,5 @@
 homeManagerModule: { lib, config, pkgs, ... }: {
-    imports = [ (import ./hm-integration.nix homeManagerModule) ];
+    imports = [ ../../modules/nixos.nix (import ./hm-integration.nix homeManagerModule) ];
 
     options.temmix = {
         enable = lib.mkOption {

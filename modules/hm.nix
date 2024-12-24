@@ -5,5 +5,6 @@
         ./kitty/hm.nix
         ./terminal/hm.nix
         ./vesktop/hm.nix
+        ./gtk/hm.nix
     ];
 }
