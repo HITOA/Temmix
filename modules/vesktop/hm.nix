@@ -1,7 +1,4 @@
 { lib, config, pkgs, ... } :
-let
-  	renderedTemplatePath = config.temmix.cacheFile + "/vesktop-temmix-color-theme.css";
-in
 {
 	options.temmix.vesktop = {
 		enable = lib.mkOption {
@@ -13,14 +10,9 @@ in
 
 	config = lib.mkIf (config.temmix.enable && config.temmix.vesktop.enable)
 	{
-    xdg.configFile."vesktop/themes/temmix.theme.css" = {
-      enable = true;
-      source = config.lib.file.mkOutOfStoreSymlink renderedTemplatePath;
-    };
-
 		temmix.templates = [{ 
 			input = ./vesktop-temmix-color-theme.css.inja; 
-			output =  renderedTemplatePath;
+			output =  xdg.configHome + "/vesktop/themes/temmix.theme.css"; #Didn't find a better way
 		}];
 	};
 }
