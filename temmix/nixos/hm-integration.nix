@@ -5,7 +5,7 @@ let
         path:
         { config, osConfig, ... }:
         lib.mkIf (lib.hasAttrByPath path config) (lib.setAttrByPath path (lib.mkDefault (lib.getAttrFromPath path osConfig)))
-    ) [ ["temmix" "enable"] ];
+    ) [ ["temmix" "enable"] ["temmix" "hm" "autoImport"] ];
 in
 {
     options.temmix.hm = {
