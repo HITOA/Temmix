@@ -11,22 +11,12 @@ in
 		};
 	};
 
-	config = 
-  let
-    vesktopTheme = pkgs.runCommandLocal "temmix-vesktop-theme" 
-    {
-      inherit (config.xdg) configHome;
-    } ''
-      mkdir -p $configHome/vesktop/themes
-      ln -sf ${renderedTemplatePath} $configHome/vesktop/themes/temmix.theme.css
-      touch $out/.keep
-    '';
-  in
-  lib.mkIf (config.temmix.enable && config.temmix.vesktop.enable)
+	config = lib.mkIf (config.temmix.enable && config.temmix.vesktop.enable)
 	{
-    home.packages = [
-      vesktopTheme
-    ];
+    xdg.configFile."vesktop/themes/temmix.theme.css" = {
+      enable = true;
+      source = config.lib.file.mkOutOfStoreSymlink renderedTemplatePath;
+    }
 
 		temmix.templates = [{ 
 			input = ./vesktop-temmix-color-theme.css.inja; 
