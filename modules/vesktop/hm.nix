@@ -11,16 +11,21 @@ in
 		};
 	};
 
-	config = lib.mkIf (config.temmix.enable && config.temmix.vesktop.enable)
+	config = 
+  let
+    vesktopTheme = pkgs.runCommandLocal "temmix-vesktop-theme" 
+    {
+      inherit (xdg) configHome;
+    } ''
+      mkdir -p $configHome/vesktop/themes
+      ln -sf ${renderedTemplatePath} $configHome/vesktop/themes/temmix.theme.css
+      touch $out/.keep
+    '';
+  in
+  lib.mkIf (config.temmix.enable && config.temmix.vesktop.enable)
 	{
     home.packages = [
-      pkgs.runCommandLocal "temmix-vesktop-theme" {
-        inherit (xdg) configHome;
-      } ''
-        mkdir -p $configHome/vesktop/themes
-        ln -sf ${renderedTemplatePath} $configHome/vesktop/themes/temmix.theme.css
-        touch $out/.keep
-      '';
+      vesktopTheme
     ];
 
 		temmix.templates = [{ 
