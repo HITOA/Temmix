@@ -3,7 +3,7 @@ let
     copyModule = builtins.map (
         path:
         { config, osConfig, ... }:
-        lib.mkIf (lib.hasAttrByPath path config) (lib.setAttrByPath path (lib.mkDefault (lib.getAttrFromPath path osConfig)))
+        lib.mkIf false (lib.setAttrByPath path (lib.mkDefault (lib.getAttrFromPath path osConfig)))
     ) (builtins.map (value: ["temmix"] ++ value) (lib.collect lib.isList (lib.mapAttrsRecursive (key: value: key) config.temmix)));
 in
 {
