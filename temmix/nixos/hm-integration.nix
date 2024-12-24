@@ -20,6 +20,6 @@ in
     lib.optionalAttrs (options ? home-manager)
     (lib.mkIf config.temmix.hm.autoImport
     {
-        home-manager.sharedModules = [ homeManagerModule ] ++ [ { temmix = { enable = lib.mkDefault true; }; } ];
+        home-manager.sharedModules = [ homeManagerModule ] ++ [ { temmix = { hm = { autoImport = lib.mkDefault true; }; }; } ];
     });
 }
