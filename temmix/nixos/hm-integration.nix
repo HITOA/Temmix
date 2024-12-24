@@ -19,6 +19,6 @@ in
     lib.optionalAttrs (options ? home-manager)
     (lib.mkIf config.temmix.hm.autoImport
     {
-        home-manager.sharedModules = [ homeManagerModule copyModule ];
+        home-manager.sharedModules = [ homeManagerModule ] ++ copyModule;
     });
 }
