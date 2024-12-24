@@ -1,11 +1,11 @@
 homeManagerModule: { lib, config, pkgs, options, ... }: 
 let
     #paths = builtins.map (value: ["temmix"] ++ value) (lib.collect lib.isList (lib.mapAttrsRecursive (key: value: key) config.temmix));
-    copyModule = builtins.map (
+    /*copyModule = builtins.map (
         path:
         { config, osConfig, ... }:
         lib.optionalAttrs (lib.hasAttrByPath path config) (lib.setAttrByPath path (lib.mkDefault (lib.getAttrFromPath path osConfig)))
-    ) [ ["temmix" "enable"] ["temmix" "hm" "autoImport"] ];
+    ) [ ["temmix" "enable"] ["temmix" "hm" "autoImport"] ];*/
 in
 {
     options.temmix.hm = {
@@ -20,6 +20,6 @@ in
     lib.optionalAttrs (options ? home-manager)
     (lib.mkIf config.temmix.hm.autoImport
     {
-        home-manager.sharedModules = [ homeManagerModule ] ++ copyModule;
+        home-manager.sharedModules = [ homeManagerModule ] ++ [ { temmix = { enable = lib.mkDefault true; }; } ];
     });
 }
