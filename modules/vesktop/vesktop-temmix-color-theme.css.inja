@@ -23,9 +23,9 @@
 .theme-light, .theme-dark {
     --search-popout-option-fade: none;
     --bg-overlay-2: var(--foreground);
-    --home-background: var(--foreground);
-    --bg-overlay-chat : var(--surface0);
-    --background-primary: var(--background);
+    --home-background: #FF0000; //var(--foreground);
+    --bg-overlay-chat : #00FF00; //var(--surface0);
+    --background-primary: #0000FF; //var(--background);
     --background-secondary: var(--foreground);
     --background-secondary-alt: var(--surface0);
     --channeltextarea-background: var(--background);
