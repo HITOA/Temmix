@@ -21,5 +21,5 @@ in
     #(lib.mkIf config.temmix.hm.autoImport
     {
         home-manager.sharedModules = [ homeManagerModule ] ++ copyModule;
-    });
+    };#);
 }
