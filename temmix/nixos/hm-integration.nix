@@ -1,8 +1,8 @@
 homeManagerModule: { lib, config, pkgs, options, ... }: 
 let
-    copyModule = { lib, osConfig, ... }: {
+    copyModule = { lib, config, osConfig, ... }: {
         config = {
-            temmix = lib.mkMerge [ temmix osConfig.temmix ];
+            temmix = lib.mkMerge [ config.temmix osConfig.temmix ];
         };
     };
 in
