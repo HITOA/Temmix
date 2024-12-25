@@ -1,13 +1,4 @@
 homeManagerModule: { lib, config, pkgs, options, ... }: 
-let
-    copyModules = builtins.map (
-        path:
-        { config, osConfig, ... }:
-        lib.setAttrByPath path (lib.mkDefault (lib.getAttrFromPath path osConfig))
-    ) [
-        ["temmix" "enable"]
-    ] ++ config.additionalPaths;
-in
 {
     options.temmix.hm = {
         autoImport = lib.mkOption {
@@ -22,6 +13,15 @@ in
     };
 
     config = 
+    let
+        copyModules = builtins.map (
+            path:
+            { config, osConfig, ... }:
+            lib.setAttrByPath path (lib.mkDefault (lib.getAttrFromPath path osConfig))
+        ) [
+            ["temmix" "enable"]
+        ] ++ config.additionalPaths;
+    in
     lib.optionalAttrs (options ? home-manager)
     (lib.mkIf config.temmix.hm.autoImport
     {
