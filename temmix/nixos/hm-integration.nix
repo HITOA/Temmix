@@ -4,9 +4,9 @@ let
         path:
         { config, osConfig, ... }:
         lib.setAttrByPath path (lib.mkDefault (lib.getAttrFromPath path osConfig))
-    ) [ 
+    ) [
         ["temmix" "enable"]
-    ];
+    ] ++ config.additionalPaths;
 in
 {
     options.temmix.hm = {
@@ -14,6 +14,10 @@ in
             type = lib.types.bool;
             description = "Wether to import temmix automatically for every Home Manager user.";
             default = true;
+        };
+        additionalPaths = lib.mkOption {
+            type = lib.types.listOf (lib.types.listOf lib.types.str);
+            default = [];
         };
     };
 
