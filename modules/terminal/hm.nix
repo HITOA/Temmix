@@ -1,6 +1,6 @@
 { lib, config, pkgs, ... } :
 let
-  	renderedTemplatePath = config.temmix.cacheFile + "/set-terminal-color.sh";
+  	renderedTemplatePath = config.temmix.cacheFile + "/terminal/set-terminal-color.sh";
 in
 {
 	options.temmix.targets.terminal = {

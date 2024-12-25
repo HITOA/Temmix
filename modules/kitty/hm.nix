@@ -1,6 +1,6 @@
 { lib, config, pkgs, ... } :
 let
-  	renderedTemplatePath = config.temmix.cacheFile + "/kitty-temmix-color-theme.conf";
+  	renderedTemplatePath = config.temmix.cacheFile + "/kitty/temmix-color-theme.conf";
 in
 {
 	options.temmix.targets.kitty = {

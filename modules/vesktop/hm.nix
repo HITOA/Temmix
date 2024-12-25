@@ -1,6 +1,6 @@
 { lib, config, pkgs, ... } :
 let
-  	renderedTemplatePath = config.temmix.cacheFile + "/vesktop-temmix-color-theme.css";
+  	renderedTemplatePath = config.temmix.cacheFile + "/vesktop/temmix-color-theme.css";
 in
 {
 	options.temmix.targets.vesktop = {

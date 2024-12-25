@@ -28,6 +28,9 @@ pkgs: { lib, config, ... }: {
 
     config = 
     let
+        templateOutputKeeps = builtins.map (value: 
+            builtins.concatStringsSep "/" (lib.init (lib.splitString "/" (builtins.toString value.output)) ++ [ ".keep" ])) 
+            config.temmix.templates;
         argsTemplates = builtins.map (value: "-t ${value.input} ${value.output}") config.temmix.templates;
         setwall = pkgs.writeShellScriptBin "setwall" ''
             if [ "$1" == "" ]; then
@@ -42,11 +45,11 @@ pkgs: { lib, config, ... }: {
     in
     lib.mkIf config.temmix.enable 
     {
-        home.file."${config.temmix.cacheFile}/.keep" = {
+        home.file = lib.genAttrs templateOutputKeeps (name: {
             enable = true;
             executable = false;
             text = "";
-        };
+        });
         home.packages = [ setwall ];
     };
 }
