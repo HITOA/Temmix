@@ -2,7 +2,7 @@
 let
 	temmixGTKTheme = derivation {
 		name = "Temmix GTK Theme";
-		builder= "${pkgs.bash}/bin/bash";
+		builder = "${pkgs.bash}/bin/bash";
 		args = [ ./build_gtk_theme.sh ];
 		inherit (pkgs) coreutils;
 		system = builtins.currentSystem;
@@ -23,7 +23,7 @@ in
 			enable = true;
 			theme = {
 				name = "temmix";
-				package = temmixGTKTheme
+				package = temmixGTKTheme;
 			};
 		};
 	};
