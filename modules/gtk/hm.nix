@@ -6,7 +6,7 @@ let
 		builder = "${pkgs.bash}/bin/bash";
 		args = [ ./build_gtk_theme.sh ];
 		coreutils = pkgs.coreutils;
-		system = stdenv.buildPlatform.system;
+		system = pkgs.stdenv.buildPlatform.system;
 		src = ./temmix-gtk;
 	};
 in
