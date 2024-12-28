@@ -1,4 +1,4 @@
-@import url("gtk-color.css");
+@import url("../gtk-color.css");
 
 * {
   background-color: @test;
