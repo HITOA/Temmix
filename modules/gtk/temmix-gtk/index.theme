@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Temmix
+Comment=Generated theme with temmix
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Temmix
+MetacityTheme=Temmix
+ButtonLayout=:minimize,maximize,close

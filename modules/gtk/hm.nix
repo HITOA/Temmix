@@ -6,6 +6,7 @@ let
 		args = [ ./build_gtk_theme.sh ];
 		coreutils = pkgs.coreutils;
 		system = "x86_64-linux";
+		src = ./temmix-gtk;
 	};
 in
 {
