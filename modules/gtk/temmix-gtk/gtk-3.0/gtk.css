@@ -1,4 +1,4 @@
-@define-color test #00ff00;
+@import url("~/.cache/temmix/gtk/gtk-color.css");
 
 * {
   background-color: @test;
