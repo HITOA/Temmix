@@ -11,6 +11,5 @@
 	config = lib.mkIf (config.temmix.enable && config.temmix.targets.gtk.enable)
 	{
     programs.dconf.enable = true;
-		environment.systemPackages = [ pkgs.dconf-editor ];
 	};
 }
