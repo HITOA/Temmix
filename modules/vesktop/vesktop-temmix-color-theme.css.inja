@@ -2,9 +2,9 @@
     --background: {{ background.hex }}4C;
     --foreground: {{ foreground.hex }}4C;
     --surface0: {{ surface0.hex }}4C;
-    --surface1: {{ surface1.hex }}4C;
-    --surface2: {{ surface2.hex }}4C;
-    --surface3: {{ surface3.hex }}4C;
+    --surface1: {{ surface1.hex }};
+    --surface2: {{ surface2.hex }};
+    --surface3: {{ surface3.hex }};
     --subtext: {{ subtext.hex }};
     --text: {{ text.hex }};    
     --primary: {{ primary.hex }}; 
