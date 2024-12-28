@@ -23,7 +23,7 @@
 /* widget base background color on backdrop windows */
 @define-color theme_unfocused_bg_color #434c5e;
 /* text widgets and the like base background color on backdrop windows */
-@define-color theme_unfocused_base_color #3d4455;
+@define-color theme_unfocused_base_color {{ surface0.hex }};
 /* base background color of selections on backdrop windows */
 @define-color theme_unfocused_selected_bg_color #8fbcbb;
 /* text/foreground color of selections on backdrop windows */
@@ -45,7 +45,7 @@
 @define-color unfocused_fg_color #8e95a4;
 @define-color unfocused_text_color #d8dee9;
 @define-color unfocused_bg_color #434c5e;
-@define-color unfocused_base_color #3d4455;
+@define-color unfocused_base_color {{ surface0.hex }};
 @define-color unfocused_selected_bg_color #8fbcbb;
 @define-color unfocused_selected_fg_color #2e3440;
 /* these colors are exported for the window manager and shouldn't be used in applications,
