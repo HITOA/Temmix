@@ -1,4 +1,4 @@
-{ lib, config, pkgs, stdenv, ... } :
+{ lib, config, pkgs, ... } :
 let
   renderedTemplatePath = config.temmix.cacheFile + "/gtk/gtk-color.css";
 	temmixGTKTheme = derivation {
