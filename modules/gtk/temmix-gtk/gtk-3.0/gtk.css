@@ -26,7 +26,7 @@
 /* widget base background color on backdrop windows */
 @define-color theme_unfocused_bg_color #434c5e;
 /* text widgets and the like base background color on backdrop windows */
-@define-color theme_unfocused_base_color {{ surface0.hex }};
+@define-color theme_unfocused_base_color #ff0000;
 /* base background color of selections on backdrop windows */
 @define-color theme_unfocused_selected_bg_color #8fbcbb;
 /* text/foreground color of selections on backdrop windows */
