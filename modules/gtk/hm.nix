@@ -24,6 +24,9 @@ in
 	{
 		services.xsettingsd = {
 			enable = true;
+			settings = {
+				"Net/ThemeName" = "Temmix";
+			};
 		};
 
     gtk = {
