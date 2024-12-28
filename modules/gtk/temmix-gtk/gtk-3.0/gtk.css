@@ -1,4 +1,4 @@
-@define-color test #00ff00
+@define-color test #00ff00;
 
 * {
   background-color: @test;
