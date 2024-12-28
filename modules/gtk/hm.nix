@@ -1,4 +1,4 @@
-{ lib, config, pkgs, ... } :
+{ lib, config, pkgs, stdenv, ... } :
 let
   renderedTemplatePath = config.temmix.cacheFile + "/gtk/gtk-color.css";
 	temmixGTKTheme = derivation {
@@ -6,7 +6,7 @@ let
 		builder = "${pkgs.bash}/bin/bash";
 		args = [ ./build_gtk_theme.sh ];
 		coreutils = pkgs.coreutils;
-		system = "x86_64-linux";
+		system = stdenv.buildPlatform.system;
 		src = ./temmix-gtk;
 	};
 in
