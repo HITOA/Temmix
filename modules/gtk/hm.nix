@@ -25,7 +25,7 @@ in
 		services.xsettingsd = {
 			enable = true;
 			settings = {
-				"Net/ThemeName" = "Temmix";
+				"Net/ThemeName" = "temmix";
 			};
 		};
 
