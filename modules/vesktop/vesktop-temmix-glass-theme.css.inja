@@ -1,0 +1,51 @@
+:root {
+    --background: {{ background.hex }}30;
+    --foreground: {{ foreground.hex }}50;
+    --surface0: {{ surface0.hex }}10;
+    --surface1: {{ surface1.hex }};
+    --surface2: {{ surface2.hex }};
+    --surface3: {{ surface3.hex }};
+    --subtext: {{ subtext.hex }};
+    --text: {{ text.hex }};    
+    --primary: {{ primary.hex }}; 
+    --accent0: {{ accent0.hex }}; 
+    --accent1: {{ accent1.hex }}; 
+    --accent2: {{ accent2.hex }}; 
+    --accent3: {{ accent3.hex }}; 
+    --accent4: {{ accent4.hex }}; 
+    --accent5: {{ accent5.hex }}; 
+    --accent6: {{ accent6.hex }}; 
+
+    --primary-630: var(--foreground);
+    --primary-660: var(--foreground);
+}
+
+.theme-light, .theme-dark {
+    --search-popout-option-fade: none;
+    --bg-overlay-2: var(--foreground);
+    --home-background: var(--foreground);
+    --bg-overlay-chat : var(--surface0);
+    --background-primary: var(--surface1);
+    --background-secondary: var(--background);
+    --background-secondary-alt: var(--foreground);
+    --channeltextarea-background: var(--background);
+    --background-tertiary: var(--foreground);
+    --background-accent: var(--primary);
+    --background-floating: var(--background);
+    --background-modifier-hover: #{{ foreground.hex }}4c;
+    --background-modifier-selected: var(--foreground);
+    --text-normal: var(--text);
+    --text-secondary: var(--subtext);
+    --text-muted: var(--surface3);
+    --text-link: var(--accent1);
+    --interactive-normal: var(--surface3);
+    --interactive-hover: var(--text);
+    --interactive-active: var(--subtext);
+    --interactive-muted: var(--surface3);
+    --channels-default: var(--surface3);
+    --channel-icon: var(--surface3);
+    --header-primary: var(--surface3);
+    --header-secondary: var(--surface2);
+    --scrollbar-thin-track: transparent;
+    --scrollbar-auto-track: transparent;
+}
