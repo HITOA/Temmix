@@ -1,4 +1,4 @@
 export PATH="$coreutils/bin"
 
 mkdir -p $out/share/themes
-cp $src $out/share/themes
+cp -r $src $out/share/themes/temmix
