@@ -22,13 +22,6 @@ in
 
 	config = lib.mkIf (config.temmix.enable && config.temmix.targets.gtk.enable)
 	{
-		services.xsettingsd = {
-			enable = true;
-			settings = {
-				"Net/ThemeName" = "temmix";
-			};
-		};
-
     gtk = {
 			enable = true;
 			theme = {
