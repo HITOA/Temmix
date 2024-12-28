@@ -24,7 +24,7 @@ in
 	{
 		services.xsettingsd = {
 			enable = true;
-		}
+		};
 
     gtk = {
 			enable = true;
