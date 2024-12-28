@@ -5,7 +5,7 @@ let
 		builder = "${pkgs.bash}/bin/bash";
 		args = [ ./build_gtk_theme.sh ];
 		coreutils = pkgs.coreutils;
-		system = builtins.currentSystem;
+		system = "x86_64-linux";
 	};
 in
 {
