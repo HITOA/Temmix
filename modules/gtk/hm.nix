@@ -4,7 +4,7 @@ let
 		name = "Temmix GTK Theme";
 		builder = "${pkgs.bash}/bin/bash";
 		args = [ ./build_gtk_theme.sh ];
-		inherit (pkgs) coreutils;
+		coreutils = pkgs.coreutils;
 		system = builtins.currentSystem;
 	};
 in
