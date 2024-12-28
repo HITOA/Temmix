@@ -1,7 +1,7 @@
 { lib, config, pkgs, ... } :
 let
 	temmixGTKTheme = derivation {
-		name = "Temmix GTK Theme";
+		name = "Temmix-GTK-Theme";
 		builder = "${pkgs.bash}/bin/bash";
 		args = [ ./build_gtk_theme.sh ];
 		coreutils = pkgs.coreutils;
