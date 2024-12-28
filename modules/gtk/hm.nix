@@ -30,6 +30,11 @@ in
 			};
 		};
 
+		temmix.commands = [''
+			dconf write /org/gnome/desktop/interface/gtk-theme "' '"
+			dconf write /org/gnome/desktop/interface/gtk-theme "'temmix'"
+		''];
+
 		temmix.templates = [
 			{
 				input = ./gtk-color.css.inja;
