@@ -1,5 +1,6 @@
 { lib, config, pkgs, ... } :
 let
+  renderedTemplatePath = config.temmix.cacheFile + "/gtk/gtk-color.css";
 	temmixGTKTheme = derivation {
 		name = "Temmix-GTK-Theme";
 		builder = "${pkgs.bash}/bin/bash";
@@ -27,5 +28,12 @@ in
 				package = temmixGTKTheme;
 			};
 		};
+
+		temmix.templates = [
+			{
+				input = ./gtk-color.css.inja;
+				output = renderedTemplatePath;
+			}
+		];
 	};
 }

@@ -22,9 +22,11 @@ in
 			'';
 		};
 		
-		temmix.templates = [{ 
-			input = ./kitty-temmix-color-theme.conf.inja; 
-			output =  renderedTemplatePath;
-		}];
+		temmix.templates = [
+			{ 
+				input = ./kitty-temmix-color-theme.conf.inja; 
+				output =  renderedTemplatePath;
+			}
+		];
 	};
 }
