@@ -8,6 +8,7 @@ let
 		coreutils = pkgs.coreutils;
 		system = pkgs.stdenv.buildPlatform.system;
 		src = ./temmix-gtk;
+		color = renderedTemplatePath;
 	};
 in
 {
