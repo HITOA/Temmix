@@ -1,7 +1,7 @@
 :root {
-    --background: {{ background.hex }}8C;
-    --foreground: {{ foreground.hex }}6C;
-    --surface0: {{ surface0.hex }}4C;
+    --background: {{ background.hex }}30;
+    --foreground: {{ foreground.hex }}50;
+    --surface0: {{ surface0.hex }}10;
     --surface1: {{ surface1.hex }};
     --surface2: {{ surface2.hex }};
     --surface3: {{ surface3.hex }};
