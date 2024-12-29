@@ -35,7 +35,7 @@ in
 		};
 
 		xdg.configFile = {
-			"gtk-4.0/gtk.css".source = "${temmixGTKTheme}"/share/themes/temmix/gtk-4.0/gtk.css;
+			"gtk-4.0/gtk.css".source = "${temmixGTKTheme}/share/themes/temmix/gtk-4.0/gtk.css";
 		};
 
 		temmix.commands = [''
