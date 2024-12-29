@@ -29,7 +29,7 @@ in
 				package = temmixGTKTheme;
 			};
 			iconTheme = {
-				name = "papirus-dark";
+				name = "Papirus-Dark";
 				package = pkgs.papirus-icon-theme;
 			};
 		};
