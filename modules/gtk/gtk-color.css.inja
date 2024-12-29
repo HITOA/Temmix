@@ -37,9 +37,9 @@
 /* widgets main borders color on backdrop windows */
 @define-color unfocused_borders #262c36;
 /* these are pretty self explicative */
-@define-color warning_color #c3674a;
-@define-color error_color #b84f59;
-@define-color success_color #49688e;
+@define-color warning_color {{ closestHUE(80).hex }};
+@define-color error_color {{ closestHUE(20).hex }};
+@define-color success_color {{ closestHUE(150).hex }};
 @define-color fg_color {{ text.hex }};
 @define-color text_color {{ text.hex }};
 @define-color bg_color {{ background.hex }};

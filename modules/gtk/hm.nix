@@ -28,6 +28,10 @@ in
 				name = "temmix";
 				package = temmixGTKTheme;
 			};
+			iconTheme = {
+				name = "papirus-dark";
+				package = pkgs.papirus-icon-theme;
+			};
 		};
 
 		temmix.commands = [''
