@@ -3,15 +3,15 @@
    ----------------
    use responsibly! */
 /* widget text/foreground color */
-@define-color theme_fg_color #d8dee9;
+@define-color theme_fg_color {{ text.hex }};
 /* text color for entries, views and content in general */
-@define-color theme_text_color #d8dee9;
+@define-color theme_text_color {{ text.hex }};
 /* widget base background color */
-@define-color theme_bg_color #434c5e;
+@define-color theme_bg_color {{ background.hex }};
 /* text widgets and the like base background color */
-@define-color theme_base_color #3b4252;
+@define-color theme_base_color {{ surface0.hex }};
 /* base background color of selections */
-@define-color theme_selected_bg_color #8fbcbb;
+@define-color theme_selected_bg_color {{ surface3.hex }};
 /* text/foreground color of selections */
 @define-color theme_selected_fg_color #fff;
 /* base background color of disabled widgets */
@@ -19,17 +19,17 @@
 /* text foreground color of disabled widgets */
 @define-color insensitive_fg_color #8e95a4;
 /* disabled text widgets and the like base background color */
-@define-color insensitive_base_color #3b4252;
+@define-color insensitive_base_color {{ surface0.hex }};
 /* widget text/foreground color on backdrop windows */
 @define-color theme_unfocused_fg_color #8e95a4;
 /* text color for entries, views and content in general on backdrop windows */
-@define-color theme_unfocused_text_color #d8dee9;
+@define-color theme_unfocused_text_color {{ text.hex }};
 /* widget base background color on backdrop windows */
-@define-color theme_unfocused_bg_color #434c5e;
+@define-color theme_unfocused_bg_color {{ background.hex }};
 /* text widgets and the like base background color on backdrop windows */
 @define-color theme_unfocused_base_color #3d4455;
 /* base background color of selections on backdrop windows */
-@define-color theme_unfocused_selected_bg_color #8fbcbb;
+@define-color theme_unfocused_selected_bg_color {{ surface3.hex }};
 /* text/foreground color of selections on backdrop windows */
 @define-color theme_unfocused_selected_fg_color #2e3440;
 /* widgets main borders color */
@@ -48,30 +48,32 @@
 @define-color selected_fg_color #fff;
 @define-color unfocused_fg_color {{ surface3.hex }};
 @define-color unfocused_text_color {{ surface3.hex }};
-@define-color unfocused_bg_color #434c5e;
+@define-color unfocused_bg_color {{ background.hex }};
 @define-color unfocused_base_color {{ background.hex }};
-@define-color unfocused_selected_bg_color #8fbcbb;
+@define-color unfocused_selected_bg_color {{ surface3.hex }};
 @define-color unfocused_selected_fg_color {{ foreground.hex }};
 @define-color primary_color {{ primary.hex }};
+@define-color alternative_surface0 {{ foreground.hex }};
+@define-color alternative_surface1 {{ surface2.hex }};
 /* these colors are exported for the window manager and shouldn't be used in applications,
 read if you used those and something break with a version upgrade you're on your own... */
-@define-color wm_title shade(#d8dee9, 1.8);
+@define-color wm_title shade({{ text.hex }}, 1.8);
 @define-color wm_unfocused_title #8e95a4;
 @define-color wm_highlight rgba(0, 0, 0, 0);
 @define-color wm_borders_edge rgba(255, 255, 255, 0.1);
-@define-color wm_bg_a shade(#434c5e, 1.2);
-@define-color wm_bg_b #434c5e;
+@define-color wm_bg_a shade({{ background.hex }}, 1.2);
+@define-color wm_bg_b {{ background.hex }};
 @define-color wm_shadow alpha(black, 0.35);
 @define-color wm_border alpha(black, 0.18);
-@define-color wm_button_hover_color_a shade(#434c5e, 1.3);
-@define-color wm_button_hover_color_b #434c5e;
-@define-color wm_button_active_color_a shade(#434c5e, 0.85);
-@define-color wm_button_active_color_b shade(#434c5e, 0.89);
-@define-color wm_button_active_color_c shade(#434c5e, 0.9);
-@define-color content_view_bg #3b4252;
-@define-color text_view_bg #3b4252;
-@define-color budgie_tasklist_indicator_color #8fbcbb;
-@define-color budgie_tasklist_indicator_color_active #8fbcbb;
+@define-color wm_button_hover_color_a shade({{ background.hex }}, 1.3);
+@define-color wm_button_hover_color_b {{ background.hex }};
+@define-color wm_button_active_color_a shade({{ background.hex }}, 0.85);
+@define-color wm_button_active_color_b shade({{ background.hex }}, 0.89);
+@define-color wm_button_active_color_c shade({{ background.hex }}, 0.9);
+@define-color content_view_bg {{ surface0.hex }};
+@define-color text_view_bg {{ surface0.hex }};
+@define-color budgie_tasklist_indicator_color {{ surface3.hex }};
+@define-color budgie_tasklist_indicator_color_active {{ surface3.hex }};
 @define-color placeholder_text_color #b9bfcb;
 @define-color STRAWBERRY_100 #ff8c82;
 @define-color STRAWBERRY_300 #ed5353;

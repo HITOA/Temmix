@@ -211,7 +211,7 @@ button {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   font-weight: normal;
   color: @fg_color;
-  background-color: #3c4454;
+  background-color: @alternative_surface1;
   text-shadow: none; }
   notebook > header > tabs > arrow,
   button.flat {
@@ -769,12 +769,12 @@ button.destructive-action {
 toolbar button:hover {
   font-weight: normal;
   color: @fg_color;
-  background-color: #3c4454;
+  background-color: @alternative_surface1;
   text-shadow: none; }
 toolbar button:active {
   font-weight: normal;
   color: @fg_color;
-  background-color: #3c4454;
+  background-color: @alternative_surface1;
   text-shadow: none; }
 
 .inline-toolbar toolbutton > button {
@@ -1414,7 +1414,7 @@ colorswatch#add-color-button {
   colorswatch#add-color-button overlay {
     font-weight: normal;
     color: @fg_color;
-    background-color: #3c4454;
+    background-color: @alternative_surface1;
     text-shadow: none; }
     colorswatch#add-color-button overlay:hover {
       color: @fg_color;
@@ -2004,7 +2004,7 @@ GraniteWidgetsWelcome {
 .titlebar:not(headerbar), .titlebar, headerbar {
   padding: 0 13px;
   min-height: 34px;
-  background: #2b313c;
+  background: @alternative_surface0;
   color: @fg_color;
   border-radius: 0; }
   .titlebar:backdrop,
@@ -2105,7 +2105,7 @@ GraniteWidgetsWelcome {
       border-radius: 4px;
       font-weight: normal;
       color: white;
-      background-color: #3c4454;
+      background-color: @alternative_surface1;
       text-shadow: none;
       box-shadow: none; }
       .titlebar button.suggested-action:hover,
@@ -2151,7 +2151,7 @@ GraniteWidgetsWelcome {
       border-radius: 4px;
       font-weight: normal;
       color: white;
-      background-color: #3c4454;
+      background-color: @alternative_surface1;
       text-shadow: none;
       box-shadow: none; }
       .titlebar button.destructive-action:hover,
@@ -2451,7 +2451,7 @@ window.csd > .titlebar:not(headerbar) {
   border-color: transparent;
   box-shadow: none; }
 .titlebar:not(headerbar) > separator {
-  background: #2b313c; }
+  background: @alternative_surface0; }
 
 /**************
  * GtkInfoBar *
@@ -2656,7 +2656,7 @@ row {
  *********/
 menubar,
 .menubar {
-  background-color: #2b313c;
+  background-color: @alternative_surface0;
   color: @fg_color;
   -GtkWidget-window-dragging: true;
   padding: 0px;
@@ -5881,7 +5881,7 @@ ConversationListView {
 #content_frame button {
   font-weight: normal;
   color: @fg_color;
-  background-color: #3c4454;
+  background-color: @alternative_surface1;
   text-shadow: none; }
   #content_frame button:hover {
     color: @fg_color;
@@ -5903,7 +5903,7 @@ ConversationListView {
   padding-top: 20px;
   padding-bottom: 0px;
   border-style: none;
-  background-color: #2b313c;
+  background-color: @alternative_surface0;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   border: solid rgba(0, 0, 0, 0.1);
@@ -5985,7 +5985,7 @@ ConversationListView {
     background-color: @selected_bg_color;
     color: @unfocused_selected_fg_color; }
 .nemo-window toolbar.primary-toolbar {
-  background: #2b313c; }
+  background: @alternative_surface0; }
 .nemo-window .nemo-inactive-pane .view, .nemo-window .nemo-inactive-pane iconview,
 .nemo-window .nemo-inactive-pane iconview {
   background-color: #353b49; }
@@ -5994,7 +5994,7 @@ ConversationListView {
 
 /* thunar */
 .thunar toolbar {
-  background-color: #2b313c; }
+  background-color: @alternative_surface0; }
 
 /* buttons in toolbar */
 .thunar toolbar.horizontal button image {
@@ -6101,7 +6101,7 @@ window.thunar toolbar#location-toolbar > toolitem > widget > widget.linked.path-
   background: @base_color; }
 
 .caja-navigation-window .primary-toolbar {
-  background: #2b313c; }
+  background: @alternative_surface0; }
   .caja-navigation-window .primary-toolbar button, .caja-navigation-window .primary-toolbar button:backdrop {
     border-color: transparent;
     background-color: transparent;
