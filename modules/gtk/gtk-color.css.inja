@@ -15,7 +15,7 @@
 /* text/foreground color of selections */
 @define-color theme_selected_fg_color #fff;
 /* base background color of disabled widgets */
-@define-color insensitive_bg_color #404859;
+@define-color insensitive_bg_color {{ surface1.hex }};
 /* text foreground color of disabled widgets */
 @define-color insensitive_fg_color #8e95a4;
 /* disabled text widgets and the like base background color */
@@ -54,7 +54,7 @@
 @define-color unfocused_selected_fg_color {{ foreground.hex }};
 @define-color primary_color {{ primary.hex }};
 @define-color alternative_surface0 {{ foreground.hex }};
-@define-color alternative_surface1 {{ surface1.hex }};
+@define-color alternative_surface1 {{ surface0.hex }};
 /* these colors are exported for the window manager and shouldn't be used in applications,
 read if you used those and something break with a version upgrade you're on your own... */
 @define-color wm_title shade({{ text.hex }}, 1.8);

@@ -99,7 +99,7 @@ selection {
     background-color: @unfocused_selected_fg_color; }
   .gtkstyle-fallback:disabled {
     color: @unfocused_fg_color;
-    background-color: #404859; }
+    background-color: @insensitive_bg_color; }
   .gtkstyle-fallback:selected {
     color: @unfocused_selected_fg_color;
     background-color: @selected_bg_color; }
@@ -277,7 +277,7 @@ button {
     button:backdrop:disabled {
       color: #b9bfcb;
       border-color: rgba(35, 40, 49, 0.3);
-      background-color: #404859;
+      background-color: @insensitive_bg_color;
       text-shadow: none; }
       notebook > header > tabs > arrow:backdrop:disabled:active, notebook > header > tabs > arrow:backdrop:disabled:checked, notebook > header > tabs > arrow:backdrop:disabled:active, notebook > header > tabs > arrow:backdrop:disabled:checked,
       button:backdrop.flat:disabled:active,
@@ -302,7 +302,7 @@ button {
   button:disabled {
     color: #b9bfcb;
     border-color: rgba(35, 40, 49, 0.3);
-    background-color: #404859;
+    background-color: @insensitive_bg_color;
     text-shadow: none; }
     notebook > header > tabs > arrow:disabled:active, notebook > header > tabs > arrow:disabled:checked,
     button:disabled:active,
@@ -816,7 +816,7 @@ entry, .linked > combobox > box > button.combo:dir(ltr), .linked > combobox > bo
   entry:disabled, .linked > combobox > box > button.combo:disabled:dir(ltr), .linked > combobox > box > button.combo:disabled:dir(rtl) {
     color: #b9bfcb;
     border-color: rgba(35, 40, 49, 0.3);
-    background-color: #404859;
+    background-color: @insensitive_bg_color;
     text-shadow: none;
     color: @unfocused_fg_color; }
 
@@ -1536,7 +1536,7 @@ spinbutton:not(.vertical), entry {
   entry:disabled {
     color: @unfocused_fg_color;
     border-color: rgba(35, 40, 49, 0.3);
-    background-color: #404859;
+    background-color: @insensitive_bg_color;
     box-shadow: none; }
   spinbutton:backdrop:not(.vertical),
   entry:backdrop {
@@ -1549,7 +1549,7 @@ spinbutton:not(.vertical), entry {
   entry:backdrop:disabled {
     color: #63708b;
     border-color: rgba(35, 40, 49, 0.3);
-    background-color: #404859;
+    background-color: @insensitive_bg_color;
     box-shadow: none; }
   spinbutton.error:not(.vertical),
   entry.error {
@@ -3133,7 +3133,7 @@ scale {
     scale slider:active {
       background-color: @selected_bg_color; }
       scale slider:active:disabled {
-        background-color: #404859;
+        background-color: @insensitive_bg_color;
         box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0px 0px 1px 1px rgba(0, 0, 0, 0.05); }
   scale.fine-tune.horizontal {
     padding-top: 9px;
@@ -5896,7 +5896,7 @@ ConversationListView {
   #content_frame button:disabled {
     color: #b9bfcb;
     border-color: rgba(35, 40, 49, 0.3);
-    background-color: #404859;
+    background-color: @insensitive_bg_color;
     text-shadow: none; }
 
 #buttonbox_frame {
