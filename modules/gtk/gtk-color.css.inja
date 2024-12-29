@@ -54,7 +54,7 @@
 @define-color unfocused_selected_fg_color {{ foreground.hex }};
 @define-color primary_color {{ primary.hex }};
 @define-color alternative_surface0 {{ foreground.hex }};
-@define-color alternative_surface1 {{ surface2.hex }};
+@define-color alternative_surface1 {{ surface1.hex }};
 /* these colors are exported for the window manager and shouldn't be used in applications,
 read if you used those and something break with a version upgrade you're on your own... */
 @define-color wm_title shade({{ text.hex }}, 1.8);
