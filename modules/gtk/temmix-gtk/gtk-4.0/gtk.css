@@ -2698,7 +2698,7 @@ notebook > header {
   padding: 1px;
   border-color: #232831;
   border-width: 1px;
-  background-color: #303643; }
+  background-color: @bg_color; }
   notebook > header:backdrop {
     border-color: #262c36;
     background-color: @bg_color; }
@@ -2880,7 +2880,7 @@ tabbar:backdrop .box > .start-action,
 tabbar:backdrop .box > .end-action {
   filter: opacity(1); }
 tabbar tabbox {
-  background-color: #303643;
+  background-color: @bg_color;
   padding: 0px;
   color: #a7b5cd; }
   tabbar tabbox > tabboxchild {
@@ -5628,7 +5628,7 @@ PantheonCalculatorMainWindow {
   transition: all 150ms ease-in-out; }
 
 .card.collapsed {
-  background-color: #303643;
+  background-color: @bg_color;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.2); }
 
 /*********
