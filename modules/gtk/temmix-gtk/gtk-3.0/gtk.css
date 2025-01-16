@@ -211,7 +211,7 @@ button {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   font-weight: normal;
   color: @fg_color;
-  background-color: #FF0000;
+  background-color: @alternative_surface1;
   text-shadow: none; }
   notebook > header > tabs > arrow,
   button.flat {
@@ -769,12 +769,12 @@ button.destructive-action {
 toolbar button:hover {
   font-weight: normal;
   color: @fg_color;
-  background-color: #FF0000;
+  background-color: @alternative_surface1;
   text-shadow: none; }
 toolbar button:active {
   font-weight: normal;
   color: @fg_color;
-  background-color: #FF0000;
+  background-color: @alternative_surface1;
   text-shadow: none; }
 
 .inline-toolbar toolbutton > button {
@@ -1414,7 +1414,7 @@ colorswatch#add-color-button {
   colorswatch#add-color-button overlay {
     font-weight: normal;
     color: @fg_color;
-    background-color: #FF0000;
+    background-color: @alternative_surface1;
     text-shadow: none; }
     colorswatch#add-color-button overlay:hover {
       color: @fg_color;
@@ -2031,7 +2031,7 @@ GraniteWidgetsWelcome {
     text-shadow: none;
     box-shadow: none;
     border: 1px solid #232831;
-    background-color: #343b48;
+    background-color: #alternative_surface1;
     min-height: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -2105,7 +2105,7 @@ GraniteWidgetsWelcome {
       border-radius: 4px;
       font-weight: normal;
       color: white;
-      background-color: #FF0000;
+      background-color: @alternative_surface1;
       text-shadow: none;
       box-shadow: none; }
       .titlebar button.suggested-action:hover,
@@ -2151,7 +2151,7 @@ GraniteWidgetsWelcome {
       border-radius: 4px;
       font-weight: normal;
       color: white;
-      background-color: #FF0000;
+      background-color: @alternative_surface1;
       text-shadow: none;
       box-shadow: none; }
       .titlebar button.destructive-action:hover,
@@ -2343,7 +2343,7 @@ GraniteWidgetsWelcome {
     text-shadow: none;
     box-shadow: none;
     border: 1px solid #232831;
-    background-color: #343b48;
+    background-color: #alternative_surface1;
     border-radius: 4px 0px 0px 4px; }
     .titlebar .path-buttons-box .dim-label, .titlebar .path-buttons-box label.separator, .titlebar .path-buttons-box .subtitle,
     headerbar .path-buttons-box .dim-label,
@@ -5881,7 +5881,7 @@ ConversationListView {
 #content_frame button {
   font-weight: normal;
   color: @fg_color;
-  background-color: #FF0000;
+  background-color: @alternative_surface1;
   text-shadow: none; }
   #content_frame button:hover {
     color: @fg_color;
@@ -6008,7 +6008,7 @@ window.thunar toolbar#location-toolbar > toolitem > widget > widget.linked.path-
   text-shadow: none;
   box-shadow: none;
   border: 1px solid #232831;
-  background-color: #343b48;
+  background-color: #alternative_surface1;
   border-radius: 0;
   border-right: 0.5px solid #232831;
   box-shadow: none;
@@ -6121,7 +6121,7 @@ window.thunar toolbar#location-toolbar > toolitem > widget > widget.linked.path-
   text-shadow: none;
   box-shadow: none;
   border: 1px solid #232831;
-  background-color: #343b48;
+  background-color: #alternative_surface1;
   border-radius: 0px;
   border-right: 1px solid #232831;
   border-left: none;
