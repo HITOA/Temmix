@@ -22,7 +22,7 @@ in
 
     config = lib.mkIf (config.temmix.enable && config.temmix.targets.vscode.enable)
     {
-        programs.vscode = {
+        programs.vscode.profiles.default = {
             extensions = [ themeExtension ];
             userSettings = {
                 "window.titleBarStyle" = "custom";
