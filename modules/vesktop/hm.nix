@@ -1,7 +1,6 @@
 { lib, config, pkgs, ... } :
 let
   	colorRenderedTemplatePath = config.temmix.cacheFile + "/vesktop/temmix-color-theme.css";
-		glassRenderedTemplatePath = config.temmix.cacheFile + "/vesktop/temmix-glass-theme.css";
 in
 {
 	options.temmix.targets.vesktop = {
@@ -21,16 +20,11 @@ in
 
     temmix.commands = [''
       ln -sf ${colorRenderedTemplatePath} ~/.config/vesktop/themes/temmix-color.theme.css
-      ln -sf ${glassRenderedTemplatePath} ~/.config/vesktop/themes/temmix-glass.theme.css
     ''];
 
 		temmix.templates = [{ 
 			input = ./vesktop-temmix-color-theme.css.inja; 
 			output =  colorRenderedTemplatePath;
-		}
-		{ 
-			input = ./vesktop-temmix-glass-theme.css.inja; 
-			output =  glassRenderedTemplatePath;
 		}];
 	};
 }
