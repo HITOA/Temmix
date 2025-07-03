@@ -10,7 +10,7 @@
   --textbright: {{ primary.hex }};
   --textdark: {{ text.hex }};
   --textdarker: {{ subtext.hex }};
-  --textdarkest: {{ surface4.hex }};
+  --textdarkest: {{ surface3.hex }};
   --font: gg sans;
   --backgroundaccent: {{ surface2.hex }};
   --backgroundprimary: {{ surface1.hex }};
