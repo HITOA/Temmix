@@ -40,6 +40,8 @@ pkgs: { lib, config, ... }: {
             
             ${pkgs.lain}/bin/lain -i $@ ${builtins.concatStringsSep " " argsTemplates}
 
+            cp $1 ${config.temmix.cacheFile}/wallpaper
+
             ${builtins.concatStringsSep "\n" config.temmix.commands}
         '';
     in
