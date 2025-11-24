@@ -1,0 +1,28 @@
+import QtQuick
+import Quickshell
+
+pragma Singleton
+pragma ComponentBehavior: Bound
+
+Singleton {
+    property color background:  "{{ background.hex }}"
+    property color foreground:  "{{ foreground.hex }}"
+    property color surface0:    "{{ surface0.hex }}"
+    property color surface1:    "{{ surface1.hex }}"
+    property color surface2:    "{{ surface2.hex }}"
+    property color surface3:    "{{ surface3.hex }}"
+    property color text:        "{{ text.hex }}"
+    property color subtext:     "{{ subtext.hex }}"
+    property color primary:     "{{ primary.hex }}"
+    property color accent0:     "{{ accent0.hex }}"
+    property color accent1:     "{{ accent1.hex }}"
+    property color accent2:     "{{ accent2.hex }}"
+    property color accent3:     "{{ accent3.hex }}"
+    property color accent4:     "{{ accent4.hex }}"
+    property color accent5:     "{{ accent5.hex }}"
+    property color accent6:     "{{ accent6.hex }}"
+
+    property color red:         "{{ closestHUE(0).hex }}"
+    property color green:       "{{ closestHUE(115).hex }}"
+    property color blue:        "{{ closestHUE(235).hex }}"
+}
